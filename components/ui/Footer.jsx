@@ -9,11 +9,12 @@ const Footer = () => {
   useEffect(() => {
     const fetchStarCount = async () => {
       try {
-        const response = await fetch('https://api.github.com/repos/ombaviskar18/Somania MiniHub');
+        const response = await fetch('https://api.github.com/repos/ombaviskar18/Somania_Minihub');
         const data = await response.json();
-        setStarCount(data.stargazers_count);
+        setStarCount(data.stargazers_count || 0);
       } catch (error) {
         console.error('Error fetching star count:', error);
+        setStarCount(0);
       }
     };
 
@@ -68,7 +69,7 @@ const Footer = () => {
               </Link>
 
               <Link
-                href="https://github.com/ombaviskar18"
+                href="https://github.com/ombaviskar18/Somania_Minihub"
                 className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all"
                 target="_blank"
               >
@@ -76,22 +77,47 @@ const Footer = () => {
                   <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
                 </svg>
               </Link>
-            </div>
 
-            {/* GitHub Star Section */}
-            <div className="flex items-center gap-3 bg-black/30 px-4 py-2 rounded-full">
               <Link
-                href="https://github.com/ombaviskar18/Minigames_Somania Agent"
-                className="flex items-center gap-2 hover:scale-105 transition-transform"
+                href="https://t.me/Somania_Minihub_bot"
+                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all"
                 target="_blank"
               >
-                <svg viewBox="0 0 16 16" width="20" height="20" className="fill-yellow-400">
-                  <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-cyan-400">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16c-.169 1.858-.896 6.728-.896 6.728-.635 2.177-1.273 2.396-2.129 2.396-.729 0-1.302-.458-1.302-1.208 0-.458.203-.812.203-.812s3.469-3.299 3.469-3.992c0-.458-.203-.677-.677-.458l-4.15 2.645s-.474.322-1.286.322c-.812 0-1.208-.458-1.208-.916 0-.322.135-.593.135-.593s4.905-4.905 5.717-5.717c.812-.812 1.624-.812 2.436 0s.812 1.624 0 2.436l-4.905 4.905s-.271.271-.271.593c0 .322.271.593.593.593s.593-.271.593-.593l4.905-4.905c1.624-1.624 1.624-4.26 0-5.884s-4.26-1.624-5.884 0z"/>
                 </svg>
-                <span className="text-gray-100 font-medium">Star on GitHub</span>
               </Link>
-              <div className="h-6 w-px bg-gray-500"/>
-              <span className="text-gray-300 font-mono">{starCount}</span>
+            </div>
+
+            {/* GitHub Star & Telegram Bot Section */}
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <div className="flex items-center gap-3 bg-black/30 px-4 py-2 rounded-full">
+                <Link
+                  href="https://github.com/ombaviskar18/Somania_Minihub"
+                  className="flex items-center gap-2 hover:scale-105 transition-transform"
+                  target="_blank"
+                >
+                  <svg viewBox="0 0 16 16" width="20" height="20" className="fill-yellow-400">
+                    <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/>
+                  </svg>
+                  <span className="text-gray-100 font-medium">Star on GitHub</span>
+                </Link>
+                <div className="h-6 w-px bg-gray-500"/>
+                <span className="text-gray-300 font-mono">{starCount}</span>
+              </div>
+              
+              <div className="flex items-center gap-3 bg-black/30 px-4 py-2 rounded-full">
+                <Link
+                  href="https://t.me/Somania_Minihub_bot"
+                  className="flex items-center gap-2 hover:scale-105 transition-transform"
+                  target="_blank"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-cyan-400">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16c-.169 1.858-.896 6.728-.896 6.728-.635 2.177-1.273 2.396-2.129 2.396-.729 0-1.302-.458-1.302-1.208 0-.458.203-.812.203-.812s3.469-3.299 3.469-3.992c0-.458-.203-.677-.677-.458l-4.15 2.645s-.474.322-1.286.322c-.812 0-1.208-.458-1.208-.916 0-.322.135-.593.135-.593s4.905-4.905 5.717-5.717c.812-.812 1.624-.812 2.436 0s.812 1.624 0 2.436l-4.905 4.905s-.271.271-.271.593c0 .322.271.593.593.593s.593-.271.593-.593l4.905-4.905c1.624-1.624 1.624-4.26 0-5.884s-4.26-1.624-5.884 0z"/>
+                  </svg>
+                  <span className="text-gray-100 font-medium">Try Telegram Bot</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

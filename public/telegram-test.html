@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somania MiniHub - Telegram Web App Test</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .logo {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .title {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: left;
+        }
+        .button {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .button:hover {
+            background: #45a049;
+        }
+        .status {
+            margin: 20px 0;
+            padding: 10px;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🎮</div>
+        <div class="title">Somania MiniHub</div>
+        <div class="subtitle">Telegram Web App Test</div>
+        
+        <div class="info">
+            <strong>🚀 Web App Status:</strong>
+            <div id="webAppStatus">Checking...</div>
+        </div>
+        
+        <div class="info">
+            <strong>👤 User Info:</strong>
+            <div id="userInfo">Loading...</div>
+        </div>
+        
+        <div class="info">
+            <strong>🔗 Platform:</strong>
+            <div id="platformInfo">Detecting...</div>
+        </div>
+        
+        <a href="/" class="button">🎮 Launch Games</a>
+        <a href="/dashboard/leaderboard" class="button">🏆 Leaderboard</a>
+        <a href="/dashboard/agent" class="button">🤖 AI Agent</a>
+        
+        <div class="status" id="status">
+            ✅ Somania MiniHub Web App is working correctly!
+        </div>
+    </div>
+
+    <script>
+        // Initialize Telegram Web App
+        let tg = window.Telegram.WebApp;
+        
+        function updateStatus() {
+            // Check if running in Telegram
+            if (tg.initData) {
+                document.getElementById('webAppStatus').innerHTML = '✅ Running in Telegram';
+                document.getElementById('userInfo').innerHTML = `
+                    User: ${tg.initDataUnsafe.user?.first_name || 'Unknown'}<br>
+                    Username: @${tg.initDataUnsafe.user?.username || 'no_username'}<br>
+                    ID: ${tg.initDataUnsafe.user?.id || 'N/A'}
+                `;
+                document.getElementById('platformInfo').innerHTML = `
+                    Platform: ${tg.platform}<br>
+                    Version: ${tg.version}<br>
+                    Theme: ${tg.colorScheme}
+                `;
+                
+                // Set theme
+                if (tg.colorScheme === 'dark') {
+                    document.body.style.background = 'linear-gradient(135deg, #2c3e50 0%, #34495e 100%)';
+                }
+                
+                // Expand the web app
+                tg.expand();
+                
+                // Enable closing confirmation
+                tg.enableClosingConfirmation();
+                
+            } else {
+                document.getElementById('webAppStatus').innerHTML = '⚠️ Not running in Telegram';
+                document.getElementById('userInfo').innerHTML = 'Open this in Telegram to see user info';
+                document.getElementById('platformInfo').innerHTML = 'Browser: ' + navigator.userAgent.split(' ')[0];
+            }
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            updateStatus();
+            
+            // Set up button clicks
+            document.querySelectorAll('.button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    if (tg.initData) {
+                        // Send data back to bot if needed
+                        tg.sendData(JSON.stringify({
+                            action: 'navigate',
+                            url: this.href,
+                            timestamp: Date.now()
+                        }));
+                    }
+                });
+            });
+        });
+        
+        // Handle back button
+        tg.onEvent('backButtonClicked', function() {
+            tg.close();
+        });
+        
+        // Show back button
+        tg.BackButton.show();
+    </script>
+</body>
+</html>

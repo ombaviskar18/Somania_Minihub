@@ -83,8 +83,8 @@ Somania MiniHub is a revolutionary platform that combines AI-powered game genera
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/somania-minihub.git
-cd somania-minihub
+git clone https://github.com/ombaviskar18/Somania_Minihub.git
+cd Somania_Minihub
 ```
 
 2. **Install dependencies**
@@ -126,8 +126,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🌟 Connect With Us
 
-- [GitHub](https://github.com/ombaviskar18)
-- [Telegram Bot](https://t.me/SomaniaMinigamesBot)
+- [GitHub Repository](https://github.com/ombaviskar18/Somania_Minihub)
+- [Telegram Bot](https://t.me/Somania_Minihub_bot)
+- [Live Demo](http://somania-minihub.vercel.app/)
 - [Somania Network](https://docs.somnia.network/)
 - [Somania Discord](https://discord.com/invite/somnia)
 

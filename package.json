@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "telegram:setup": "node scripts/setup-telegram-bot.js",
+    "telegram:test": "node scripts/test-telegram-bot.js"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.0",

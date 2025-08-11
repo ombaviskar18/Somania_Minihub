@@ -162,7 +162,7 @@ const VintageGamesLanding = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-6xl md:text-8xl font-bold tracking-wider uppercase text-center"
           >
-                      Somania MiniGames Launchpad <span className="text-gray-500 animate-in">By Agent</span>
+                      Somania MiniHub <span className="text-gray-500 animate-in">Minigames launchpad</span>
           </motion.h1>
         </div>
           <motion.p
