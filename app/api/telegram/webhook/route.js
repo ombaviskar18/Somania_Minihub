@@ -57,7 +57,7 @@ Ready to play? Click the button below! 👇
                 [
                   {
                     text: '🎮 Play Games Now',
-                    web_app: { url: 'http://somania-minihub.vercel.app/dashboard' }
+                    web_app: { url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app/'}dashboard` }
                   }
                 ]
               ]
@@ -91,7 +91,7 @@ View full leaderboard and compete! 🚀
                 [
                   {
                     text: '🏆 View Full Leaderboard',
-                    web_app: { url: 'http://somania-minihub.vercel.app/dashboard/leaderboard' }
+                    web_app: { url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app/'}dashboard/leaderboard` }
                   }
                 ]
               ]
@@ -127,7 +127,7 @@ Coming Soon on Somania Network! 🌟
                 [
                   {
                     text: '🤖 Learn More About AI Agent',
-                    web_app: { url: 'http://somania-minihub.vercel.app/dashboard/agent' }
+                    web_app: { url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app/'}dashboard/agent` }
                   }
                 ]
               ]
@@ -165,7 +165,7 @@ Coming Soon on Somania Network! 🌟
                 [
                   {
                     text: '💎 View All Plans',
-                    web_app: { url: 'http://somania-minihub.vercel.app/dashboard/upgrade' }
+                    web_app: { url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app/'}dashboard/upgrade` }
                   }
                 ]
               ]
@@ -199,7 +199,7 @@ Or use the menu button to access all features! 👇
                 [
                   {
                     text: '🎮 Launch Game',
-                    web_app: { url: 'http://somania-minihub.vercel.app/' }
+                    web_app: { url: process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app/' }
                   }
                 ]
               ]

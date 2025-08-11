@@ -151,8 +151,7 @@ const VintageGamesLanding = () => {
         <div className="flex flex-col items-center justify-center min-h-screen">
           <img
             src="/pc.gif"
-            alt="
-            "
+            alt="Somania MiniHub"
             width={202}
             height={202}
             className="mb-6"

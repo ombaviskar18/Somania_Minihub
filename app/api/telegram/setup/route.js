@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
 import { setBotCommands, setBotMenuButton } from '../../../../lib/telegram/bot.js';
 
-const TELEGRAM_BOT_TOKEN = 'Your_Token';
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || 'Your_Token';
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`;
-const WEBHOOK_URL = 'https://somania-minihub.vercel.app/api/telegram/webhook';
+const WEBHOOK_URL = `${process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app'}/api/telegram/webhook`;
 
 export async function POST() {
   try {

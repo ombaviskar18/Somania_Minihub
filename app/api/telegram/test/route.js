@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 
-const TELEGRAM_BOT_TOKEN = 'Your_Token';
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || 'Your_Token';
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`;
-const WEB_APP_URL = 'https://somania-minihub.vercel.app/';
+const WEB_APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app/';
 
 async function sendTestMessage(chatId) {
   try {

@@ -1,4 +1,5 @@
-import { Chess } from 'chess.js';
+// Note: chess.js needs to be loaded differently in worker context
+self.importScripts('https://unpkg.com/chess.js@1.2.0/chess.min.js');
 
 self.addEventListener('message', (e) => {
   const game = new Chess(e.data.fen);
