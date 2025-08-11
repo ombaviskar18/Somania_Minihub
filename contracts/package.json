@@ -1,0 +1,29 @@
+{
+  "name": "somania-minihub-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for Somania MiniHub gaming platform",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network somania-testnet",
+    "verify": "hardhat verify"
+  },
+  "keywords": [
+    "somania",
+    "blockchain",
+    "gaming",
+    "smart-contracts",
+    "solidity"
+  ],
+  "author": "Somania MiniHub Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.17.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.0"
+  }
+}

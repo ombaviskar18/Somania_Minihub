@@ -1,0 +1,15 @@
+[package]
+name = "access"
+version = "1.0.0"
+authors = []
+
+[addresses]
+
+[dev-addresses]
+
+[dependencies.Somania Framework]
+git = "https://github.com/Somania -labs/Somania -framework.git"
+rev = "mainnet"
+subdir = "Somania -framework"
+
+[dev-dependencies]
