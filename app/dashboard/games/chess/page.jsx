@@ -17,10 +17,13 @@ const ChessBlitz = () => {
 
   // Initialize Web Worker
   useEffect(() => {
-    aiWorkerRef.current = new Worker(
-        new URL('./workers/chessAI.worker.js', import.meta.url),
-      { type: 'module' }
-    );
+    try {
+      if (typeof Worker !== 'undefined') {
+        aiWorkerRef.current = new Worker('/workers/chessAI.worker.js');
+      }
+    } catch (error) {
+      console.warn('Web Worker not supported, using fallback AI');
+    }
 
     return () => {
       if (aiWorkerRef.current) {
@@ -59,32 +62,66 @@ const ChessBlitz = () => {
     return false;
   }, [game, timeLeft]);
 
+  // Fallback AI function
+  const makeFallbackAIMove = useCallback(() => {
+    try {
+      const moves = game.moves();
+      if (moves.length > 0) {
+        const randomMove = moves[Math.floor(Math.random() * moves.length)];
+        const move = game.move(randomMove);
+        setGame(new Chess(game.fen()));
+        setMoveCount(c => c + 1);
+        if (!checkGameOver()) {
+          setTimeLeft(prev => ({ ...prev, [game.turn()]: prev[game.turn()] + 2 }));
+        }
+      }
+    } catch (error) {
+      console.error('Fallback AI move error:', error);
+    }
+  }, [game, checkGameOver]);
+
   // AI move handler
   const makeAIMove = useCallback(() => {
     if (game.turn() !== playerColor[0] && gameStatus === 'playing') {
-      aiWorkerRef.current.postMessage({
-        fen: game.fen(),
-        depth: Math.min(aiLevel + Math.floor(moveCount/10), 3)
-      });
-
-      aiWorkerRef.current.onmessage = (e) => {
+      if (aiWorkerRef.current) {
         try {
-          const move = game.move(e.data);
-          setGame(new Chess(game.fen()));
-          setMoveCount(c => c + 1);
-          if (!checkGameOver()) {
-            setTimeLeft(prev => ({ ...prev, [game.turn()]: prev[game.turn()] + 2 }));
-          }
-        } catch (error) {
-          console.error('AI move error:', error);
-        }
-      };
+          aiWorkerRef.current.postMessage({
+            fen: game.fen(),
+            depth: Math.min(aiLevel + Math.floor(moveCount/10), 3)
+          });
 
-      aiWorkerRef.current.onerror = (error) => {
-        console.error('Web Worker error:', error);
-      };
+          aiWorkerRef.current.onmessage = (e) => {
+            try {
+              if (e.data) {
+                const move = game.move(e.data);
+                setGame(new Chess(game.fen()));
+                setMoveCount(c => c + 1);
+                if (!checkGameOver()) {
+                  setTimeLeft(prev => ({ ...prev, [game.turn()]: prev[game.turn()] + 2 }));
+                }
+              } else {
+                makeFallbackAIMove();
+              }
+            } catch (error) {
+              console.error('AI move error:', error);
+              makeFallbackAIMove();
+            }
+          };
+
+          aiWorkerRef.current.onerror = (error) => {
+            console.error('Web Worker error:', error);
+            makeFallbackAIMove();
+          };
+        } catch (error) {
+          console.error('Worker communication error:', error);
+          makeFallbackAIMove();
+        }
+      } else {
+        // Use fallback AI if worker is not available
+        makeFallbackAIMove();
+      }
     }
-  }, [game, playerColor, aiLevel, moveCount, checkGameOver]);
+  }, [game, playerColor, aiLevel, moveCount, checkGameOver, makeFallbackAIMove]);
 
   // Player move handler
   const onDrop = (sourceSquare, targetSquare) => {
