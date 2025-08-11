@@ -1,13 +1,21 @@
 import { NextResponse } from 'next/server';
-import OpenAI from 'openai';
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-});
 
 export async function POST(request) {
   try {
     const { prompt, model = 'gpt-4o' } = await request.json();
+
+    // Check if OpenAI API key is available
+    if (!process.env.OPENAI_API_KEY) {
+      return NextResponse.json({ 
+        suggestion: 'OpenAI API key not configured. Please add OPENAI_API_KEY to your environment variables to enable AI suggestions for Tetris.' 
+      });
+    }
+
+    // Dynamically import OpenAI only if needed
+    const OpenAI = (await import('openai')).default;
+    const openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY
+    });
 
     const response = await openai.chat.completions.create({
       model: model,

@@ -1,13 +1,4 @@
 import { NextResponse } from 'next/server';
-import OpenAI from 'openai';
-
-if (!process.env.OPENAI_API_KEY) {
-  throw new Error('Missing OpenAI API key');
-}
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
 
 export async function POST(request) {
   try {
@@ -19,6 +10,23 @@ export async function POST(request) {
         { status: 400 }
       );
     }
+
+    // Check if OpenAI API key is available
+    if (!process.env.OPENAI_API_KEY) {
+      return NextResponse.json(
+        { 
+          error: 'OpenAI API key not configured. Please add OPENAI_API_KEY to your environment variables to enable game generation.',
+          code: 'function GameComponent() { const [message] = React.useState("OpenAI API not configured"); return React.createElement("div", {style: {padding: "20px", textAlign: "center"}}, message); }'
+        },
+        { status: 200 }
+      );
+    }
+
+    // Dynamically import OpenAI only if needed
+    const OpenAI = (await import('openai')).default;
+    const openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
 
     const fullPrompt = `CRITICAL GAME COMPONENT GENERATION RULES:
 1. Create PURE React functional component using ONLY React core functionality

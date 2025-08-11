@@ -1,21 +1,7 @@
 import { NextResponse } from 'next/server';
-import OpenAI from 'openai';
 
 export async function POST(request) {
-  // Validate environment variable
-  if (!process.env.OPENAI_API_KEY) {
-    return NextResponse.json(
-      { error: 'OpenAI API key is not configured' }, 
-      { status: 500 }
-    );
-  }
-
   try {
-    // Initialize OpenAI client
-    const openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY
-    });
-
     // Parse request body
     const { prompt, model = 'gpt-3.5-turbo' } = await request.json();
 
@@ -26,6 +12,19 @@ export async function POST(request) {
         { status: 400 }
       );
     }
+
+    // Check if OpenAI API key is available
+    if (!process.env.OPENAI_API_KEY) {
+      return NextResponse.json({ 
+        suggestion: 'OpenAI API key not configured. Please add OPENAI_API_KEY to your environment variables to enable AI suggestions for Ping Pong.' 
+      });
+    }
+
+    // Dynamically import OpenAI only if needed
+    const OpenAI = (await import('openai')).default;
+    const openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY
+    });
 
     // Generate code suggestion using OpenAI
     const response = await openai.chat.completions.create({

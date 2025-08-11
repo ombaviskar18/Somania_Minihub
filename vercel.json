@@ -25,12 +25,7 @@
       ]
     }
   ],
-  "env": {
-    "TELEGRAM_BOT_TOKEN": "@telegram_bot_token",
-    "TELEGRAM_BOT_USERNAME": "Somania_MiniHub_bot",
-    "NEXT_PUBLIC_APP_URL": "https://somania-minihub.vercel.app/",
-    "OPENAI_API_KEY": "@openai_api_key"
-  },
+
   "build": {
     "env": {
       "NEXT_PUBLIC_APP_URL": "https://somania-minihub.vercel.app/"
