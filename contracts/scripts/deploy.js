@@ -6,62 +6,62 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
-  // Deploy SomaniaToken first
-  console.log("\n🚀 Deploying SomaniaToken...");
-  const SomaniaToken = await hre.ethers.getContractFactory("SomaniaToken");
+  // Deploy SomniaToken first
+  console.log("\n🚀 Deploying SomniaToken...");
+  const SomniaToken = await hre.ethers.getContractFactory("SomniaToken");
   
   // For testnet, we'll use placeholder addresses that will be updated later
   const treasuryWallet = deployer.address; // Use deployer as treasury for now
   const rewardPoolAddress = deployer.address; // Will be updated after GameRewards deployment
   const stakingAddress = deployer.address; // Will be updated when staking is implemented
   
-  const somaniaToken = await SomaniaToken.deploy(
+  const SomniaToken = await SomniaToken.deploy(
     rewardPoolAddress,
     stakingAddress,
     treasuryWallet
   );
-  await somaniaToken.deployed();
-  console.log("✅ SomaniaToken deployed to:", somaniaToken.address);
+  await SomniaToken.deployed();
+  console.log("✅ SomniaToken deployed to:", SomniaToken.address);
 
   // Deploy GameRewards
   console.log("\n🎮 Deploying GameRewards...");
   const GameRewards = await hre.ethers.getContractFactory("GameRewards");
   const gameRewards = await GameRewards.deploy(
-    somaniaToken.address,
-    deployer.address // Will be updated after SomaniaMiniHub deployment
+    SomniaToken.address,
+    deployer.address // Will be updated after SomniaMiniHub deployment
   );
   await gameRewards.deployed();
   console.log("✅ GameRewards deployed to:", gameRewards.address);
 
-  // Deploy SomaniaMiniHub
-  console.log("\n🎯 Deploying SomaniaMiniHub...");
-  const SomaniaMiniHub = await hre.ethers.getContractFactory("SomaniaMiniHub");
-  const somaniaMiniHub = await SomaniaMiniHub.deploy(somaniaToken.address);
-  await somaniaMiniHub.deployed();
-  console.log("✅ SomaniaMiniHub deployed to:", somaniaMiniHub.address);
+  // Deploy SomniaMiniHub
+  console.log("\n🎯 Deploying SomniaMiniHub...");
+  const SomniaMiniHub = await hre.ethers.getContractFactory("SomniaMiniHub");
+  const SomniaMiniHub = await SomniaMiniHub.deploy(SomniaToken.address);
+  await SomniaMiniHub.deployed();
+  console.log("✅ SomniaMiniHub deployed to:", SomniaMiniHub.address);
 
   // Update GameRewards with correct game contract address
   console.log("\n🔄 Updating GameRewards configuration...");
   await gameRewards.transferOwnership(deployer.address);
   console.log("✅ GameRewards ownership configured");
 
-  // Update SomaniaToken with correct addresses
-  console.log("\n🔄 Updating SomaniaToken configuration...");
-  await somaniaToken.updateRewardPool(gameRewards.address);
-  console.log("✅ SomaniaToken reward pool updated");
+  // Update SomniaToken with correct addresses
+  console.log("\n🔄 Updating SomniaToken configuration...");
+  await SomniaToken.updateRewardPool(gameRewards.address);
+  console.log("✅ SomniaToken reward pool updated");
 
   // Transfer some tokens to GameRewards for initial rewards
   console.log("\n💰 Setting up initial reward pool...");
   const initialRewardAmount = hre.ethers.utils.parseEther("10000"); // 10,000 tokens
-  await somaniaToken.transfer(gameRewards.address, initialRewardAmount);
+  await SomniaToken.transfer(gameRewards.address, initialRewardAmount);
   console.log("✅ Initial reward pool funded with 10,000 tokens");
 
   // Display deployment summary
   console.log("\n📋 DEPLOYMENT SUMMARY");
   console.log("=====================");
-  console.log("SomaniaToken:", somaniaToken.address);
+  console.log("SomniaToken:", SomniaToken.address);
   console.log("GameRewards:", gameRewards.address);
-  console.log("SomaniaMiniHub:", somaniaMiniHub.address);
+  console.log("SomniaMiniHub:", SomniaMiniHub.address);
   console.log("Deployer:", deployer.address);
   console.log("Network:", hre.network.name);
   console.log("Chain ID:", hre.network.config.chainId);
@@ -73,9 +73,9 @@ async function main() {
     chainId: hre.network.config.chainId,
     deployer: deployer.address,
     contracts: {
-      SomaniaToken: somaniaToken.address,
+      SomniaToken: SomniaToken.address,
       GameRewards: gameRewards.address,
-      SomaniaMiniHub: somaniaMiniHub.address
+      SomniaMiniHub: SomniaMiniHub.address
     },
     deployedAt: new Date().toISOString()
   };
@@ -90,9 +90,9 @@ async function main() {
   // Verification instructions
   if (hre.network.name !== "hardhat") {
     console.log("\n🔍 To verify contracts on block explorer, run:");
-    console.log(`npx hardhat verify --network ${hre.network.name} ${somaniaToken.address} "${rewardPoolAddress}" "${stakingAddress}" "${treasuryWallet}"`);
-    console.log(`npx hardhat verify --network ${hre.network.name} ${gameRewards.address} "${somaniaToken.address}" "${deployer.address}"`);
-    console.log(`npx hardhat verify --network ${hre.network.name} ${somaniaMiniHub.address} "${somaniaToken.address}"`);
+    console.log(`npx hardhat verify --network ${hre.network.name} ${SomniaToken.address} "${rewardPoolAddress}" "${stakingAddress}" "${treasuryWallet}"`);
+    console.log(`npx hardhat verify --network ${hre.network.name} ${gameRewards.address} "${SomniaToken.address}" "${deployer.address}"`);
+    console.log(`npx hardhat verify --network ${hre.network.name} ${SomniaMiniHub.address} "${SomniaToken.address}"`);
   }
 
   console.log("\n🎉 Deployment completed successfully!");

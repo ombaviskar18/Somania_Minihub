@@ -7,9 +7,9 @@ authors = []
 
 [dev-addresses]
 
-[dependencies.Somania Framework]
-git = "https://github.com/Somania -labs/Somania -framework.git"
+[dependencies.Somnia Framework]
+git = "https://github.com/Somnia -labs/Somnia -framework.git"
 rev = "mainnet"
-subdir = "Somania -framework"
+subdir = "Somnia -framework"
 
 [dev-dependencies]

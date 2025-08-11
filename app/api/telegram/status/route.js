@@ -125,11 +125,11 @@ export async function GET() {
     
     // Add quick links
     status.quick_links = {
-      bot_url: 'https://t.me/Somania_Minihub_bot',
-      web_app_url: 'https://somania-minihub.vercel.app/',
-      webhook_url: 'https://somania-minihub.vercel.app/api/telegram/webhook',
-      setup_url: 'https://somania-minihub.vercel.app/api/telegram/setup',
-      github_repo: 'https://github.com/ombaviskar18/Somania_Minihub'
+      bot_url: 'https://t.me/Somnia_Minihub_bot',
+      web_app_url: 'https://Somnia-minihub.vercel.app/',
+      webhook_url: 'https://Somnia-minihub.vercel.app/api/telegram/webhook',
+      setup_url: 'https://Somnia-minihub.vercel.app/api/telegram/setup',
+      github_repo: 'https://github.com/ombaviskar18/Somnia_Minihub'
     };
     
     return NextResponse.json(status, { 

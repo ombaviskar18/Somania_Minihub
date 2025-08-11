@@ -1,18 +1,18 @@
-# 🎮 Somania MiniHub
+# 🎮 Somnia MiniHub
 
 <div align="center">
-  <img src="/public/pc.gif" alt="Somania MiniHub Logo" width="200"/>
+  <img src="/public/pc.gif" alt="Somnia MiniHub Logo" width="200"/>
   
-  <h3>Launch, Play, Innovate: AI Minigames on Somania</h3>
+  <h3>Launch, Play, Innovate: AI Minigames on Somnia</h3>
 
   [![GitHub](https://img.shields.io/badge/GitHub-ombaviskar18-blue?style=flat&logo=github)](https://github.com/ombaviskar18)
   [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-  [![Somania](https://img.shields.io/badge/Blockchain-Somania-purple.svg)](https://docs.somnia.network/)
+  [![Somnia](https://img.shields.io/badge/Blockchain-Somnia-purple.svg)](https://docs.somnia.network/)
 </div>
 
 ## 🚀 Overview
 
-Somania MiniHub is a revolutionary platform that combines AI-powered game generation with blockchain technology. It enables users to create, play, and monetize unique minigames on the Somania blockchain, featuring an innovative AI agent system for game generation and interaction.
+Somnia MiniHub is a revolutionary platform that combines AI-powered game generation with blockchain technology. It enables users to create, play, and monetize unique minigames on the Somnia blockchain, featuring an innovative AI agent system for game generation and interaction.
 
 ## ✨ Core Features
 
@@ -22,9 +22,9 @@ Somania MiniHub is a revolutionary platform that combines AI-powered game genera
 - Player behavior analysis
 - Auto-balancing mechanics
 
-### 🛡️ Somania AI Agent
+### 🛡️ Somnia AI Agent
 - Advanced security suite with Solidity Smart Contract Integration
-- Real-time transaction monitoring on Somania Network
+- Real-time transaction monitoring on Somnia Network
 - Smart contract auditing and optimization
 - Revenue generation and compliance automation
 
@@ -36,10 +36,10 @@ Somania MiniHub is a revolutionary platform that combines AI-powered game genera
 - APIs/SDK integration
 
 ### 💎 Tokenization and Monetization (Upcoming)
-- STT (Somania Test Token) integration
-- Co-creation rewards on Somania Network
+- STT (Somnia Test Token) integration
+- Co-creation rewards on Somnia Network
 - Liquidity pools and DeFi features
-- DAO governance with Somania consensus
+- DAO governance with Somnia consensus
 
 ### 🏆 Leaderboard Rankings (Upcoming)
 - ELO rating system
@@ -75,7 +75,7 @@ Somania MiniHub is a revolutionary platform that combines AI-powered game genera
 - **Frontend**: Next.js, React, Framer Motion
 - **Styling**: Tailwind CSS
 - **AI Integration**: OpenAI GPT-3.5 Turbo
-- **Blockchain**: Somania Network (EVM-compatible Layer 1)
+- **Blockchain**: Somnia Network (EVM-compatible Layer 1)
 - **Smart Contracts**: Solidity
 - **Bot Platform**: Telegram
 
@@ -83,8 +83,8 @@ Somania MiniHub is a revolutionary platform that combines AI-powered game genera
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/ombaviskar18/Somania_Minihub.git
-cd Somania_Minihub
+git clone https://github.com/ombaviskar18/Somnia_Minihub.git
+cd Somnia_Minihub
 ```
 
 2. **Install dependencies**
@@ -126,14 +126,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🌟 Connect With Us
 
-- [GitHub Repository](https://github.com/ombaviskar18/Somania_Minihub)
-- [Telegram Bot](https://t.me/Somania_Minihub_bot)
-- [Live Demo](http://somania-minihub.vercel.app/)
-- [Somania Network](https://docs.somnia.network/)
-- [Somania Discord](https://discord.com/invite/somnia)
+- [GitHub Repository](https://github.com/ombaviskar18/Somnia_Minihub)
+- [Telegram Bot](https://t.me/Somnia_Minihub_bot)
+- [Live Demo](http://Somnia-minihub.vercel.app/)
+- [Somnia Network](https://docs.somnia.network/)
+- [Somnia Discord](https://discord.com/invite/somnia)
 
 ---
 
 <div align="center">
-  <strong>Built with ❤️ by the Somania MiniHub Team</strong>
+  <strong>Built with ❤️ by the Somnia MiniHub Team</strong>
 </div>

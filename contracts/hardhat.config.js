@@ -15,7 +15,7 @@ module.exports = {
     hardhat: {
       chainId: 31337
     },
-    "somania-testnet": {
+    "Somnia-testnet": {
       url: "https://dream-rpc.somnia.network/",
       chainId: 50312,
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
@@ -24,11 +24,11 @@ module.exports = {
   },
   etherscan: {
     apiKey: {
-      "somania-testnet": "your-api-key-here"
+      "Somnia-testnet": "your-api-key-here"
     },
     customChains: [
       {
-        network: "somania-testnet",
+        network: "Somnia-testnet",
         chainId: 50312,
         urls: {
           apiURL: "https://shannon-explorer.somnia.network/api",

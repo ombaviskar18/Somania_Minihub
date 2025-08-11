@@ -1,22 +1,22 @@
-# 🎮 Somania MiniHub Smart Contracts
+# 🎮 Somnia MiniHub Smart Contracts
 
-Smart contracts for the Somania MiniHub gaming platform built on Somania Network (EVM-compatible Layer 1 blockchain).
+Smart contracts for the Somnia MiniHub gaming platform built on Somnia Network (EVM-compatible Layer 1 blockchain).
 
 ## 📋 Overview
 
-This repository contains the smart contracts that power the Somania MiniHub gaming ecosystem, including game management, rewards distribution, and tokenomics.
+This repository contains the smart contracts that power the Somnia MiniHub gaming ecosystem, including game management, rewards distribution, and tokenomics.
 
 ## 🏗️ Architecture
 
 ### Core Contracts
 
-1. **SomaniaMiniHub.sol** - Main gaming platform contract
+1. **SomniaMiniHub.sol** - Main gaming platform contract
    - Game registration and management
    - Player registration and scoring
    - Leaderboard functionality
    - Reward pool management
 
-2. **SomaniaToken.sol** - Platform utility token (SMT)
+2. **SomniaToken.sol** - Platform utility token (SMT)
    - ERC20 token with additional gaming features
    - Reward distribution mechanisms
    - Staking and governance functionality
@@ -29,7 +29,7 @@ This repository contains the smart contracts that power the Somania MiniHub gami
 
 ## 🌐 Network Details
 
-### Somania Testnet
+### Somnia Testnet
 - **Chain ID**: 50312
 - **RPC URL**: https://dream-rpc.somnia.network/
 - **Block Explorer**: https://shannon-explorer.somnia.network/
@@ -62,7 +62,7 @@ npm run test
 npx hardhat run scripts/deploy.js
 ```
 
-#### Somania Testnet
+#### Somnia Testnet
 ```bash
 npm run deploy:testnet
 ```
@@ -73,20 +73,20 @@ Create a `.env` file in the contracts directory:
 
 ```env
 PRIVATE_KEY=your_private_key_here
-SOMANIA_RPC_URL=https://dream-rpc.somnia.network/
+Somnia_RPC_URL=https://dream-rpc.somnia.network/
 ETHERSCAN_API_KEY=your_api_key_here
 ```
 
 ## 🎯 Contract Features
 
-### SomaniaMiniHub
+### SomniaMiniHub
 - ✅ Player registration system
 - ✅ Game creation and management
 - ✅ Score tracking and leaderboards
 - ✅ Reward pool distribution
 - ✅ Multi-game support
 
-### SomaniaToken (SMT)
+### SomniaToken (SMT)
 - ✅ ERC20 standard compliance
 - ✅ Mintable with supply cap (1B tokens)
 - ✅ Burnable functionality
@@ -125,25 +125,25 @@ ETHERSCAN_API_KEY=your_api_key_here
 ### Player Registration
 ```solidity
 // Register as a new player
-somaniaMiniHub.registerPlayer();
+SomniaMiniHub.registerPlayer();
 ```
 
 ### Create a Game
 ```solidity
 // Create a new game with reward pool
-somaniaMiniHub.createGame("Game Name", "Description", rewardAmount);
+SomniaMiniHub.createGame("Game Name", "Description", rewardAmount);
 ```
 
 ### Play a Game
 ```solidity
 // Submit game score
-somaniaMiniHub.playGame(gameId, score);
+SomniaMiniHub.playGame(gameId, score);
 ```
 
 ### Claim Rewards
 ```solidity
 // Claim rewards for a game session
-somaniaMiniHub.claimRewards(sessionId);
+SomniaMiniHub.claimRewards(sessionId);
 
 // Claim daily reward
 gameRewards.claimDailyReward();
@@ -195,7 +195,7 @@ Test coverage includes:
 
 ### Frontend Integration
 ```javascript
-// Connect to Somania Network
+// Connect to Somnia Network
 const provider = new ethers.providers.JsonRpcProvider('https://dream-rpc.somnia.network/');
 
 // Contract instances
@@ -247,8 +247,8 @@ MIT License - see LICENSE file for details
 
 - [Discord](https://discord.com/invite/somnia)
 - [Documentation](https://docs.somnia.network/)
-- [GitHub Issues](https://github.com/somania-minihub/contracts/issues)
+- [GitHub Issues](https://github.com/Somnia-minihub/contracts/issues)
 
 ---
 
-Built with ❤️ for the Somania ecosystem
+Built with ❤️ for the Somnia ecosystem

@@ -1,15 +1,15 @@
-# Extending Your Somania Agent with Blockchain Query Capabilities
+# Extending Your Somnia Agent with Blockchain Query Capabilities
 
-This guide builds upon your existing Somania Agent, adding powerful blockchain querying features. You'll learn how to retrieve transaction details, account resources, and token balances directly from the Somania blockchain.
+This guide builds upon your existing Somnia Agent, adding powerful blockchain querying features. You'll learn how to retrieve transaction details, account resources, and token balances directly from the Somnia blockchain.
 
 ## Prerequisites
 
-1. Completed the main Somania Agent setup from [README.md](README.md)
+1. Completed the main Somnia Agent setup from [README.md](README.md)
 2. Working agent with basic functionality
 
 ## New Features Overview
 
-Your enhanced Somania Agent now includes capabilities to:
+Your enhanced Somnia Agent now includes capabilities to:
 - Query specific transactions using transaction hashes
 - View account resources and token balances
 - Monitor blockchain state in real-time
@@ -64,7 +64,7 @@ txn_hash = await create_token(
 )
 ```
 
-The `create_token` function is a powerful tool that allows you to deploy new fungible assets on Somania . Here's what each parameter does:
+The `create_token` function is a powerful tool that allows you to deploy new fungible assets on Somnia . Here's what each parameter does:
 
 - `sender`: The Account object that will be the token creator/owner
 - `name`: The full name of your token (e.g., "My Awesome Token")
@@ -73,15 +73,15 @@ The `create_token` function is a powerful tool that allows you to deploy new fun
 - `project_uri`: URL to your token's documentation/website
 
 Under the hood, the function:
-1. Constructs an `EntryFunction` call to the Somania launchpad module
+1. Constructs an `EntryFunction` call to the Somnia launchpad module
 2. Uses the module address `0xe522476ab48374606d11cc8e7a360e229e37fd84fb533fcde63e091090c62149::launchpad`
 3. Calls the `create_fa_simple` function with your parameters
 4. Signs and submits the transaction
 5. Returns the transaction hash for tracking
 
 > [!NOTE]  
-> After creating a token, you can view it on the Somania Explorer using the URL format:
-> `https://explorer.Somania labs.com/txn/{transaction_hash}/payload?network=testnet`
+> After creating a token, you can view it on the Somnia Explorer using the URL format:
+> `https://explorer.Somnia labs.com/txn/{transaction_hash}/payload?network=testnet`
 
 > [!WARNING]  
 > Token creation requires gas fees. Make sure your wallet has sufficient APT before creating tokens.
@@ -119,7 +119,7 @@ All new functions include robust error handling:
 - Missing resources
 
 ## Bugs fixed in this edition
-- Agent now provides correct links to Somania Explorer payload page
+- Agent now provides correct links to Somnia Explorer payload page
 - Agent is aware it can offer to look up a transaction hash for you
 - Fixed get_balance_in_apt_sync to handle optional address parameter
 - Fixed string interpolation in agent's wallet address display
@@ -151,10 +151,10 @@ Now that your agent can query blockchain state, consider:
 3. Implementing transaction history analysis
 4. Developing custom analytics tools
 
-For more advanced features and detailed API documentation, visit [Somania .dev](https://Somania .dev).
+For more advanced features and detailed API documentation, visit [Somnia .dev](https://Somnia .dev).
 
 > [!IMPORTANT]  
-> We're using Somania Devnet for this tutorial as Testnet faucet access is currently restricted. When using the explorer or other tools, make sure to select "Devnet" network. The agent's functions and interactions remain the same, just on a different network.
+> We're using Somnia Devnet for this tutorial as Testnet faucet access is currently restricted. When using the explorer or other tools, make sure to select "Devnet" network. The agent's functions and interactions remain the same, just on a different network.
 
 ## What's Next?
 
@@ -165,9 +165,9 @@ Your AI agent can now:
 - Guide users through basic operations
 
 For the next level of blockchain interaction, consider:
-1. Learn more about Move smart contracts with the [Your First Move Module Guide at Somania .dev](https://Somania .dev/en/build/guides/first-move-module), perhaps build a custom Move modules to interact with?
-2. Explore the [Somania SDK documentation](https://Somania .dev/en/build/sdks), perhaps try building an agent in a different language and contribute to this open source project?
-3. Join the [Somania Discord](https://discord.gg/Somania labs) to connect with other developers.
+1. Learn more about Move smart contracts with the [Your First Move Module Guide at Somnia .dev](https://Somnia .dev/en/build/guides/first-move-module), perhaps build a custom Move modules to interact with?
+2. Explore the [Somnia SDK documentation](https://Somnia .dev/en/build/sdks), perhaps try building an agent in a different language and contribute to this open source project?
+3. Join the [Somnia Discord](https://discord.gg/Somnia labs) to connect with other developers.
 4. Let us know you enjoyed this content, tag us and post your experience and thoughts on social media!
 
 Some ideas for extending this agent:

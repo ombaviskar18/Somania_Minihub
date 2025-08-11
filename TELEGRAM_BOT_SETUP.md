@@ -1,24 +1,24 @@
-# 🤖 Somania MiniHub Telegram Bot Setup
+# 🤖 Somnia MiniHub Telegram Bot Setup
 
-This guide explains how to set up and use the Somania MiniHub Telegram bot integration.
+This guide explains how to set up and use the Somnia MiniHub Telegram bot integration.
 
 ## 📋 Bot Information
 
-- **Bot Username**: `@Somania_Minihub_bot`
+- **Bot Username**: `@Somnia_Minihub_bot`
 - **Bot Token**: `Your_Token`
-- **Web App URL**: `http://somania-minihub.vercel.app/`
-- **GitHub Repository**: `https://github.com/ombaviskar18/Somania_Minihub`
+- **Web App URL**: `http://Somnia-minihub.vercel.app/`
+- **GitHub Repository**: `https://github.com/ombaviskar18/Somnia_Minihub`
 
 ## 🚀 Quick Start
 
 ### 1. Access the Bot
-- Open Telegram and search for `@Somania_Minihub_bot`
-- Or click this link: [https://t.me/Somania_Minihub_bot](https://t.me/Somania_Minihub_bot)
+- Open Telegram and search for `@Somnia_Minihub_bot`
+- Or click this link: [https://t.me/Somnia_Minihub_bot](https://t.me/Somnia_Minihub_bot)
 - Send `/start` to begin
 
 ### 2. Available Commands
 ```
-/start      - Launch Somania MiniHub
+/start      - Launch Somnia MiniHub
 /games      - View available games
 /stats      - Platform statistics  
 /leaderboard - View top players
@@ -28,7 +28,7 @@ This guide explains how to set up and use the Somania MiniHub Telegram bot integ
 ```
 
 ### 3. Web App Integration
-The bot includes a Web App that opens Somania MiniHub directly in Telegram:
+The bot includes a Web App that opens Somnia MiniHub directly in Telegram:
 - Click the "🎮 Play Games" menu button
 - Use inline keyboard buttons in bot messages
 - Access all platform features seamlessly
@@ -39,9 +39,9 @@ The bot includes a Web App that opens Somania MiniHub directly in Telegram:
 Create a `.env.local` file with:
 ```env
 TELEGRAM_BOT_TOKEN=Your_Token
-TELEGRAM_BOT_USERNAME=SomaniaMinihubBot
-NEXT_PUBLIC_APP_URL=http://somania-minihub.vercel.app/
-NEXT_PUBLIC_TELEGRAM_WEB_APP_URL=http://somania-minihub.vercel.app/
+TELEGRAM_BOT_USERNAME=SomniaMinihubBot
+NEXT_PUBLIC_APP_URL=http://Somnia-minihub.vercel.app/
+NEXT_PUBLIC_TELEGRAM_WEB_APP_URL=http://Somnia-minihub.vercel.app/
 ```
 
 ### API Endpoints
@@ -59,7 +59,7 @@ NEXT_PUBLIC_TELEGRAM_WEB_APP_URL=http://somania-minihub.vercel.app/
 ### Bot Configuration
 Run the setup endpoint to configure the bot:
 ```bash
-curl -X POST https://somania-minihub.vercel.app/api/telegram/setup
+curl -X POST https://Somnia-minihub.vercel.app/api/telegram/setup
 ```
 
 This will:
@@ -76,7 +76,7 @@ This will:
 - **Real-time Updates**: Instant notifications and game alerts
 
 ### 2. Reward System
-- **SMT Tokens**: Earn Somania Test Tokens
+- **SMT Tokens**: Earn Somnia Test Tokens
 - **Leaderboards**: Compete with other players
 - **Achievements**: Unlock special rewards
 
@@ -133,7 +133,7 @@ The bot handles various message types:
 
 ### Features
 - **Seamless Experience**: Native Telegram integration
-- **Full Platform Access**: All Somania MiniHub features
+- **Full Platform Access**: All Somnia MiniHub features
 - **Real-time Sync**: Synchronized with bot interactions
 - **Responsive Design**: Optimized for mobile
 
@@ -142,14 +142,14 @@ The bot handles various message types:
 // Web App button in inline keyboard
 {
   text: '🎮 Launch Game',
-  web_app: { url: 'http://somania-minihub.vercel.app/' }
+  web_app: { url: 'http://Somnia-minihub.vercel.app/' }
 }
 
 // Menu button configuration
 {
   type: 'web_app',
   text: '🎮 Play Games',
-  web_app: { url: 'http://somania-minihub.vercel.app/' }
+  web_app: { url: 'http://Somnia-minihub.vercel.app/' }
 }
 ```
 
@@ -191,7 +191,7 @@ The bot handles various message types:
 
 ### Webhook Configuration
 The webhook URL is automatically set to:
-`https://somania-minihub.vercel.app/api/telegram/webhook`
+`https://Somnia-minihub.vercel.app/api/telegram/webhook`
 
 ## 📞 Support
 
@@ -199,7 +199,7 @@ The webhook URL is automatically set to:
 - Use `/help` command in bot
 - Check GitHub repository issues
 - Contact support team
-- Join Somania Discord community
+- Join Somnia Discord community
 
 ### Common Issues
 1. **Bot Not Responding**: Check webhook configuration
@@ -223,4 +223,4 @@ The webhook URL is automatically set to:
 
 ---
 
-**🎮 Ready to start gaming on Telegram? Visit [@Somania_Minihub_bot](https://t.me/Somania_Minihub_bot) now!**
+**🎮 Ready to start gaming on Telegram? Visit [@Somnia_Minihub_bot](https://t.me/Somnia_Minihub_bot) now!**

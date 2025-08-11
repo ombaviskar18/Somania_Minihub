@@ -1,8 +1,8 @@
-# Building Your AI-Powered Somania Agent
+# Building Your AI-Powered Somnia Agent
 
-The Somania blockchain allows developers—and even non-developers—to interact with Move modules (smart contracts) through various SDKs, APIs, and ABIs. Now, with the help of this AI Agent, you can do all that **through a conversation**—no deep coding expertise required. If the idea of opening a terminal makes you nervous, check out [Brian Wong’s Somania Agent Template](https://x.com/briannwongg/status/1867716033659965672) on Replit (no Github required!), which inspired this very tutorial.
+The Somnia blockchain allows developers—and even non-developers—to interact with Move modules (smart contracts) through various SDKs, APIs, and ABIs. Now, with the help of this AI Agent, you can do all that **through a conversation**—no deep coding expertise required. If the idea of opening a terminal makes you nervous, check out [Brian Wong’s Somnia Agent Template](https://x.com/briannwongg/status/1867716033659965672) on Replit (no Github required!), which inspired this very tutorial.
 
-## Why Build an AI Agent on Somania ?
+## Why Build an AI Agent on Somnia ?
 
 AI Agents have exploded in popularity thanks to large language models (LLMs) like ChatGPT. Instead of performing narrow tasks (like old-school trading bots), our AI Agent uses an LLM in a conversation loop ([called a REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)) and some pre-defined functions so that it can follow plain-English instructions—“Deploy a token,” “Check my wallet balance,” or “Store data on-chain.” 
 
@@ -13,7 +13,7 @@ In 2024, projects like **Freysa** showcased an AI defending a blockchain account
 > [!NOTE]  
 > We use Python in this tutorial but you should be able to complete this tutorial without any Python experience.
 
-By connecting GPT-4o to Somania ’s Move smart contracts and Python’s Somania -sdk, we’re building an agent that:
+By connecting GPT-4o to Somnia ’s Move smart contracts and Python’s Somnia -sdk, we’re building an agent that:
 
 - **Understands** your instructions in everyday language.
 - **Interacts** with your on-chain resources (e.g., deploying tokens, querying data).
@@ -31,12 +31,12 @@ If you’re coming from Node.js, don’t worry—we’ll provide analogies to he
 
 ## How It Works
 
-You can think of your AI Agent as a helpful bank employee. They constantly listen to what you say (`main.py`), know how to handle your finances on-chain (`Somania _wrapper.py`), and have been trained by Corporate on how to be helpful (`agents.py`).
+You can think of your AI Agent as a helpful bank employee. They constantly listen to what you say (`main.py`), know how to handle your finances on-chain (`Somnia _wrapper.py`), and have been trained by Corporate on how to be helpful (`agents.py`).
 
-In other words, the Somania Agent is built with three main files:
+In other words, the Somnia Agent is built with three main files:
 
 1. `main.py` - This starts the conversation loop (REPL) between you and the Agent.
-2. `Somania _wrapper.py` - This tells the agent how to talk to the Somania blockchain using the Somania SDK and Fullnode API.
+2. `Somnia _wrapper.py` - This tells the agent how to talk to the Somnia blockchain using the Somnia SDK and Fullnode API.
 3. `agents.py` - This is where functions that the AI Agent can actually directly call live. It’s also where we define some specific “instructions” for GPT.
 
 By running `main.py`, you start a conversation where you can ask the AI Agent whatever you want, and the agent will do it’s best to answer and do what you ask.  No complicated scripts **or manual transaction-building required.**
@@ -115,7 +115,7 @@ To create an AI Agent, you will need an API key for the AI. This agent was writt
 >
 > It may take a few minutes for this API key to work after funding.
 
-## Part 1: Getting Ready To Run Your Somania Agent
+## Part 1: Getting Ready To Run Your Somnia Agent
 
 Before we write any code, we need to set up our development environment. That means downloading the code, choosing the right version of Python, and installing our dependencies.
 
@@ -123,8 +123,8 @@ Before we write any code, we need to set up our development environment. That me
 
 2. Create your project directory:
 ```bash
-git clone https://github.com/tippi-fifestarr/Somania -agent-local.git Somania -agent
-cd Somania -agent
+git clone https://github.com/tippi-fifestarr/Somnia -agent-local.git Somnia -agent
+cd Somnia -agent
 ```
 
 3. Copy `.env-example` into a new file named `.env` by running:
@@ -209,7 +209,7 @@ This command does several things:
 ```bash
 source venv/bin/activate
 ```
-Your prompt should now show `(venv)` or `(Somania -agent)` at the beginning.
+Your prompt should now show `(venv)` or `(Somnia -agent)` at the beginning.
 
 > [!NOTE] 
 > The purpose of activating the virtual environment is to keep your project dependencies isolated. This ensures different projects don't interfere with each other's required packages.
@@ -235,7 +235,7 @@ pip install -r requirements.txt
 > - `openai`: Connects to OpenAI's API for the language model
 > - `python-dotenv`: Loads environment variables (like your API keys)
 > - `requests` & `requests-oauthlib`: Handles HTTP requests and OAuth authentication
-> - `Somania -sdk`: Interfaces with the Somania blockchain
+> - `Somnia -sdk`: Interfaces with the Somnia blockchain
 
 We are now fully ready to run our AI Agent!
 
@@ -245,7 +245,7 @@ Now that everything is set up, let's see what your AI Agent can actually do with
 
 ### Step 1: Do You Know My Wallet?
 
-Your AI Agent is designed to interact with the Somania blockchain, but before it can help you, it needs to know who you are. The first thing you should do is check if the agent knows your wallet.
+Your AI Agent is designed to interact with the Somnia blockchain, but before it can help you, it needs to know who you are. The first thing you should do is check if the agent knows your wallet.
 
 Try running:
 
@@ -256,7 +256,7 @@ python main.py
 You should see something like this:
 
 ```
-Somania SDK wrapper loaded in test mode
+Somnia SDK wrapper loaded in test mode
 Found OpenAI API key: sk-pr...Rt3wA
 Found Devnet wallet address: 0x8fddcb869ad1df548fa98ae06f2c915855f059db1549315abfd2f9054af1f89e
 Starting Swarm CLI 🐝
@@ -272,10 +272,10 @@ User: how much does my wallet have?
 The agent will check the balance for your stored wallet address:
 
 ```
-Somania Agent: get_balance_in_apt_sync()
+Somnia Agent: get_balance_in_apt_sync()
 Getting balance for wallet: 0x8fddcb869ad1df548fa98ae06f2c915855f059db1549315abfd2f9054af1f89e
 Wallet balance: 1.00 APT
-Somania Agent: The balance in your wallet is 1 APT.
+Somnia Agent: The balance in your wallet is 1 APT.
 ```
 
 ### Step 2: What’s Your Wallet?
@@ -289,10 +289,10 @@ User: how much does your wallet have?
 The agent will respond with its own balance:
 
 ```
-Somania Agent: get_balance_in_apt_sync()
+Somnia Agent: get_balance_in_apt_sync()
 Getting balance for wallet: 0xc7042486514606bedb28a5ed8c979973e87df21bc81bf82894be44b835c6752a
 Wallet balance: 0.00 APT
-Somania Agent: The balance in my wallet is 0 APT.
+Somnia Agent: The balance in my wallet is 0 APT.
 ```
 
 ### Step 3: Compare Our Balances
@@ -306,12 +306,12 @@ User: what’s the difference?
 And the agent will summarize:
 
 ```
-Somania Agent: The difference between your wallet and my wallet is that your wallet currently has 1 APT, while my wallet has 0 APT. That makes a difference of 1 APT.
+Somnia Agent: The difference between your wallet and my wallet is that your wallet currently has 1 APT, while my wallet has 0 APT. That makes a difference of 1 APT.
 ```
 
 ### Step 4: Fund and Compare Again
 
-Your agent can fund its own wallet using the Somania faucet. Try asking:
+Your agent can fund its own wallet using the Somnia faucet. Try asking:
 
 ```
 User: can you fund your wallet and then report the difference?
@@ -320,7 +320,7 @@ User: can you fund your wallet and then report the difference?
 The agent will execute:
 
 ```
-Somania Agent: fund_wallet_in_apt_sync()
+Somnia Agent: fund_wallet_in_apt_sync()
 Funding wallet: 0xc7042486514606bedb28a5ed8c979973e87df21bc81bf82894be44b835c6752a with 1000 APT
 Transaction hash: 32e7c0da2dbdfb7434d8147f437b3562b0d342b7d243716ba0be1ce83f23730d
 Funded wallet: 0xc7042486514606bedb28a5ed8c979973e87df21bc81bf82894be44b835c6752a
@@ -329,7 +329,7 @@ Funded wallet: 0xc7042486514606bedb28a5ed8c979973e87df21bc81bf82894be44b835c6752
 Now, the agent rechecks its balance:
 
 ```
-Somania Agent: get_balance_in_apt_sync()
+Somnia Agent: get_balance_in_apt_sync()
 Getting balance for wallet: 0xc7042486514606bedb28a5ed8c979973e87df21bc81bf82894be44b835c6752a
 Wallet balance: 1000.00 APT
 ```
@@ -337,7 +337,7 @@ Wallet balance: 1000.00 APT
 And confirms:
 
 ```
-Somania Agent: I’ve funded my wallet with 1000 APT. The new balance in my wallet is 1000 APT. The difference between your wallet (1 APT) and my wallet (1000 APT) is now 999 APT.
+Somnia Agent: I’ve funded my wallet with 1000 APT. The new balance in my wallet is 1000 APT. The difference between your wallet (1 APT) and my wallet (1000 APT) is now 999 APT.
 ```
 
 ### Step 5: Double-Check With a Transaction Hash
@@ -351,49 +351,49 @@ User: can you check that transaction hash?
 Your agent will fetch the details using:
 
 ```
-Somania Agent: get_transaction_sync(32e7c0da2dbdfb7434d8147f437b3562b0d342b7d243716ba0be1ce83f23730d)
+Somnia Agent: get_transaction_sync(32e7c0da2dbdfb7434d8147f437b3562b0d342b7d243716ba0be1ce83f23730d)
 ```
 
 And it will return:
 
 ```
-Somania Agent: The transaction was successful! You can check it here:
-https://explorer.Somania labs.com/txn/32e7c0da2dbdfb7434d8147f437b3562b0d342b7d243716ba0be1ce83f23730d?network=devnet
+Somnia Agent: The transaction was successful! You can check it here:
+https://explorer.Somnia labs.com/txn/32e7c0da2dbdfb7434d8147f437b3562b0d342b7d243716ba0be1ce83f23730d?network=devnet
 ```
 
 Now that you’ve verified transactions, let’s level up: **deploying your own Move module!**
 
 ### Step 6: Deploying a Move Module
 
-Your AI Agent can help you interact with Move smart contracts, but to deploy one, you'll need to use the Somania CLI.  You can ask it to walk you through the process or follow these steps below:
+Your AI Agent can help you interact with Move smart contracts, but to deploy one, you'll need to use the Somnia CLI.  You can ask it to walk you through the process or follow these steps below:
 
-1. Make sure you have the Somania CLI installed:
+1. Make sure you have the Somnia CLI installed:
 
 ```bash
-Somania --version
+Somnia --version
 ```
 
-If you don't [get it here](https://Somania .dev/en/build/cli)
+If you don't [get it here](https://Somnia .dev/en/build/cli)
 
 2. Ensure you have the `Move.toml` and `sources/access.move` files.  
 
 3. Compile the contract by running:
 
 ```bash
-Somania move compile --named-addresses access=default
+Somnia move compile --named-addresses access=default
 ```
 
 4. Publish it with:
 
 ```bash
-Somania move publish --named-addresses access=default
+Somnia move publish --named-addresses access=default
 ```
 
 You’ll be asked to confirm a gas fee. Type `y` to continue.
 
 > [!NOTE]  
-> If you get an error here its because you haven't funded your wallet address or set up the Somania CLI to know your wallet address.
-> Run `Somania init` to create and fund a new wallet. Make sure to update your .env with this address and restart your terminal.
+> If you get an error here its because you haven't funded your wallet address or set up the Somnia CLI to know your wallet address.
+> Run `Somnia init` to create and fund a new wallet. Make sure to update your .env with this address and restart your terminal.
 
 5. Once deployed, you can check your module:
 
@@ -404,7 +404,7 @@ User: check my modules, plz
 And your agent will respond:
 
 ```
-Somania Agent: Your account at 0x8fddcb869ad1df548fa98ae06f2c915855f059db1549315abfd2f9054af1f89e has the following module:
+Somnia Agent: Your account at 0x8fddcb869ad1df548fa98ae06f2c915855f059db1549315abfd2f9054af1f89e has the following module:
 
 Module Name: simple_storage
 - get_meaning_of_view: Returns 42.
@@ -412,7 +412,7 @@ Module Name: simple_storage
 - store_value: Stores a new number.
 
 See it on-chain:  
-https://explorer.Somania labs.com/account/0x8fddcb869ad1df548fa98ae06f2c915855f059db1549315abfd2f9054af1f89e/modules/code/simple_storage?network=devnet
+https://explorer.Somnia labs.com/account/0x8fddcb869ad1df548fa98ae06f2c915855f059db1549315abfd2f9054af1f89e/modules/code/simple_storage?network=devnet
 ```
 
 ### Step 7: Calling Your Module’s Functions
@@ -426,7 +426,7 @@ User: can you call the view function?
 The agent will execute:
 
 ```
-Somania Agent: execute_view_function_sync()
+Somnia Agent: execute_view_function_sync()
 Executing view function: get_meaning_of_view
 Result: 42
 ```
@@ -440,14 +440,14 @@ User: can you store that number in store_value?
 The agent submits:
 
 ```
-Somania Agent: execute_entry_function_sync()
+Somnia Agent: execute_entry_function_sync()
 Transaction submitted successfully! Txn Hash: 0x6ec57bccc28f29ee74c70ecab6df0f427307b228ce37f4637c3f97e68149d426
 ```
 
 Pretty great, right!?
 
 Here are some ideas for next steps:
-1. Learn more about Move smart contracts with the [Your First Move Module Guide at Somania .dev](https://Somania .dev/en/build/guides/first-move-module), perhaps build a custom Move modules to interact with?
-2. Explore the [Somania SDK documentation](https://Somania .dev/en/build/sdks), perhaps try building an agent in a different language and contribute to this open source project?
-3. Join the [Somania Discord](https://discord.gg/Somania labs) to connect with other developers.
+1. Learn more about Move smart contracts with the [Your First Move Module Guide at Somnia .dev](https://Somnia .dev/en/build/guides/first-move-module), perhaps build a custom Move modules to interact with?
+2. Explore the [Somnia SDK documentation](https://Somnia .dev/en/build/sdks), perhaps try building an agent in a different language and contribute to this open source project?
+3. Join the [Somnia Discord](https://discord.gg/Somnia labs) to connect with other developers.
 4. Let us know you enjoyed this content, tag us and post your experience and thoughts on social media!

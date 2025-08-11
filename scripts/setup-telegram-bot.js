@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
 /**
- * Telegram Bot Setup Script for Somania MiniHub
+ * Telegram Bot Setup Script for Somnia MiniHub
  * This script configures the Telegram bot with proper webhook and commands
  */
 
 const TELEGRAM_BOT_TOKEN = 'Your_Token';
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`;
-const WEBHOOK_URL = 'https://somania-minihub.vercel.app/api/telegram/webhook';
-const WEB_APP_URL = 'https://somania-minihub.vercel.app/';
+const WEBHOOK_URL = 'https://Somnia-minihub.vercel.app/api/telegram/webhook';
+const WEB_APP_URL = 'https://Somnia-minihub.vercel.app/';
 
 async function makeRequest(endpoint, data = {}) {
   try {
@@ -29,7 +29,7 @@ async function makeRequest(endpoint, data = {}) {
 }
 
 async function setupBot() {
-  console.log('🚀 Setting up Somania MiniHub Telegram Bot...\n');
+  console.log('🚀 Setting up Somnia MiniHub Telegram Bot...\n');
   
   try {
     // 1. Get bot info
@@ -58,7 +58,7 @@ async function setupBot() {
     // 3. Set bot commands
     console.log('\n3️⃣ Setting bot commands...');
     const commands = [
-      { command: 'start', description: '🎮 Start gaming on Somania MiniHub' },
+      { command: 'start', description: '🎮 Start gaming on Somnia MiniHub' },
       { command: 'games', description: '🎯 View available games' },
       { command: 'stats', description: '📊 Platform statistics' },
       { command: 'leaderboard', description: '🏆 View top players' },
@@ -92,7 +92,7 @@ async function setupBot() {
     
     // 5. Set bot description
     console.log('\n5️⃣ Setting bot description...');
-    const description = `🎮 Somania MiniHub - AI-powered gaming platform on Somania Network!
+    const description = `🎮 Somnia MiniHub - AI-powered gaming platform on Somnia Network!
 
 🚀 Features:
 • 15+ AI-powered mini-games
@@ -112,7 +112,7 @@ Start gaming now with /start command!`;
     
     // 6. Set short description
     console.log('\n6️⃣ Setting short description...');
-    const shortDescription = '🎮 AI-powered gaming platform on Somania Network. Play games, earn rewards, deploy AI agents!';
+    const shortDescription = '🎮 AI-powered gaming platform on Somnia Network. Play games, earn rewards, deploy AI agents!';
     
     const shortDescResult = await makeRequest('setMyShortDescription', { 
       short_description: shortDescription 
@@ -138,8 +138,8 @@ Start gaming now with /start command!`;
     
     console.log('\n🎉 Bot setup completed successfully!');
     console.log('\n📱 Bot Information:');
-    console.log(`   Username: @Somania_Minihub_bot`);
-    console.log(`   Link: https://t.me/Somania_Minihub_bot`);
+    console.log(`   Username: @Somnia_Minihub_bot`);
+    console.log(`   Link: https://t.me/Somnia_Minihub_bot`);
     console.log(`   Web App: ${WEB_APP_URL}`);
     console.log(`   Webhook: ${WEBHOOK_URL}`);
     

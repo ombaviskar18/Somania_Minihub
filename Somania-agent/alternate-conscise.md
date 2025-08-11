@@ -1,6 +1,6 @@
-# Setting Up Your First Somania AI Agent - A Guide for JavaScript Developers
+# Setting Up Your First Somnia AI Agent - A Guide for JavaScript Developers
 
-Create an AI-powered agent that can interact with the Somania blockchain, combining the capabilities of GPT models with blockchain operations. This guide helps JavaScript developers get started with Python and Somania .
+Create an AI-powered agent that can interact with the Somnia blockchain, combining the capabilities of GPT models with blockchain operations. This guide helps JavaScript developers get started with Python and Somnia .
 
 > [!NOTE]  
 > If you're already familiar with Python, you can skip directly to [Part 2: Building the Agent](#part-2-building-the-agent).
@@ -8,7 +8,7 @@ Create an AI-powered agent that can interact with the Somania blockchain, combin
 You'll learn how to:
 1. Set up a Python development environment (similar to Node.js setup)
 2. Create a virtual environment (like `node_modules` but for Python)
-3. Build an AI agent that can interact with Somania blockchain
+3. Build an AI agent that can interact with Somnia blockchain
 
 ## Prerequisites
 
@@ -73,8 +73,8 @@ pyenv install 3.11
 
 1. Create and navigate to project directory:
 ```bash
-mkdir Somania -agent
-cd Somania -agent
+mkdir Somnia -agent
+cd Somnia -agent
 ```
 
 2. Initialize git and create `.gitignore`:
@@ -102,7 +102,7 @@ source venv/bin/activate  # For Mac/Linux
 5. Install dependencies:
 ```bash
 python -m pip install --upgrade pip
-pip install python-dotenv requests requests-oauthlib Somania -sdk openai
+pip install python-dotenv requests requests-oauthlib Somnia -sdk openai
 pip freeze > requirements.txt
 ```
 
@@ -117,17 +117,17 @@ echo "OPENAI_API_KEY=your-key-here" >> .env
 
 ### Creating Core Files
 
-1. Create the SDK wrapper (`Somania _sdk_wrapper.py`):
+1. Create the SDK wrapper (`Somnia _sdk_wrapper.py`):
 ```python
 import os
-from Somania _sdk.account import Account, AccountAddress
-from Somania _sdk.async_client import FaucetClient, RestClient
-from Somania _sdk.transactions import EntryFunction, TransactionArgument, TransactionPayload
-from Somania _sdk.bcs import Serializer
+from Somnia _sdk.account import Account, AccountAddress
+from Somnia _sdk.async_client import FaucetClient, RestClient
+from Somnia _sdk.transactions import EntryFunction, TransactionArgument, TransactionPayload
+from Somnia _sdk.bcs import Serializer
 
 # Initialize clients
-rest_client = RestClient("https://api.testnet.Somania labs.com/v1")
-faucet_client = FaucetClient("https://faucet.testnet.Somania labs.com", rest_client)
+rest_client = RestClient("https://api.testnet.Somnia labs.com/v1")
+faucet_client = FaucetClient("https://faucet.testnet.Somnia labs.com", rest_client)
 
 async def fund_wallet(wallet_address, amount):
     """Funds a wallet with test APT."""
@@ -154,8 +154,8 @@ async def get_balance(wallet_address):
 import os
 import asyncio
 from dotenv import load_dotenv
-from Somania _sdk.account import Account
-from Somania _sdk_wrapper import get_balance, fund_wallet
+from Somnia _sdk.account import Account
+from Somnia _sdk_wrapper import get_balance, fund_wallet
 
 load_dotenv()
 
@@ -183,8 +183,8 @@ def close_event_loop():
     loop.close()
 
 # Initialize agent
-Somania _agent = {
-    "name": "Somania Agent",
+Somnia _agent = {
+    "name": "Somnia Agent",
     "get_balance": get_balance_in_apt_sync,
     "fund_wallet": fund_wallet_in_apt_sync
 }
@@ -193,14 +193,14 @@ Somania _agent = {
 3. Create main entry point (`main.py`):
 ```python
 from dotenv import load_dotenv
-from agents import Somania _agent, close_event_loop
+from agents import Somnia _agent, close_event_loop
 
 if __name__ == "__main__":
     try:
         load_dotenv()
-        print("Somania Agent Test Mode")
-        print(f"Agent name: {Somania _agent['name']}")
-        print(f"Test balance: {Somania _agent['get_balance']()}")
+        print("Somnia Agent Test Mode")
+        print(f"Agent name: {Somnia _agent['name']}")
+        print(f"Test balance: {Somnia _agent['get_balance']()}")
     finally:
         close_event_loop()
 ```
@@ -214,8 +214,8 @@ python main.py
 
 You should see output like:
 ```
-Somania Agent Test Mode
-Agent name: Somania Agent
+Somnia Agent Test Mode
+Agent name: Somnia Agent
 Test balance: 1.0 APT (test mode)
 ```
 
@@ -228,8 +228,8 @@ Test balance: 1.0 APT (test mode)
 
 ## Next Steps
 
-1. Learn about [Move programming](https://Somania .dev/guides/move-guides/move-introduction/)
-2. Explore [Somania SDK documentation](https://Somania .dev/sdks/python-sdk)
+1. Learn about [Move programming](https://Somnia .dev/guides/move-guides/move-introduction/)
+2. Explore [Somnia SDK documentation](https://Somnia .dev/sdks/python-sdk)
 3. Add more blockchain capabilities to your agent
 
 > [!NOTE]  

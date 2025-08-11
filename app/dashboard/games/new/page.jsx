@@ -23,14 +23,14 @@ export default function VintageGameGeneratorPage() {
 
     // Validate input
     if (!gameRequest.trim()) {
-      setError('Please describe the Somania minigames black and white game you want to create');
+      setError('Please describe the Somnia minigames black and white game you want to create');
       return;
     }
 
     setIsLoading(true);
     try {
       const response = await axios.post('/api/new', { 
-        prompt: `Create a Somania minigames black and white game: ${gameRequest}`
+        prompt: `Create a Somnia minigames black and white game: ${gameRequest}`
       }, {
         headers: {
           'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ export default function VintageGameGeneratorPage() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-8 text-white flex items-center justify-center gap-4">
           <Play className="text-green-500" />
-          Somania Game Generator
+          Somnia Game Generator
           <Code className="text-blue-500" />
         </h1>
 
@@ -140,7 +140,7 @@ export default function VintageGameGeneratorPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-white">
                   <Wand2 className="text-blue-500" />
-                  Generate Somania MiniGames
+                  Generate Somnia MiniGames
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -148,7 +148,7 @@ export default function VintageGameGeneratorPage() {
                   value={gameRequest}
                   onChange={(e) => setGameRequest(e.target.value)}
                   className="w-full h-[350px] font-mono text-sm bg-gray-700 text-white border-2 border-gray-600"
-                  placeholder="Describe a Somania Minihub with Ai agent (e.g., 'tic-tac-toe', 'Space Invaders', 'Pac-Man')"
+                  placeholder="Describe a Somnia Minihub with Ai agent (e.g., 'tic-tac-toe', 'Space Invaders', 'Pac-Man')"
                 />
                 <Button
                   onClick={generateGame}
@@ -187,7 +187,7 @@ export default function VintageGameGeneratorPage() {
                   {gameComponent || (
                     <div className="flex items-center justify-center h-full text-gray-400">
                       <p className="text-center">
-                        Generated Somania minigame will appear here
+                        Generated Somnia minigame will appear here
                       </p>
                     </div>
                   )}

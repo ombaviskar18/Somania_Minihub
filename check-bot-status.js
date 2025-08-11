@@ -1,4 +1,4 @@
-// Bot Status Check Script for Somania MiniHub
+// Bot Status Check Script for Somnia MiniHub
 // Run this with: node check-bot-status.js
 
 const TELEGRAM_BOT_TOKEN = 'Your_Token';
@@ -16,7 +16,7 @@ async function makeRequest(endpoint) {
 }
 
 async function checkBotStatus() {
-  console.log('🔍 Checking Somania MiniHub Telegram Bot Status...\n');
+  console.log('🔍 Checking Somnia MiniHub Telegram Bot Status...\n');
   
   try {
     // 1. Bot Info
@@ -99,9 +99,9 @@ async function checkBotStatus() {
     }
     
     console.log('\n🎯 Quick Test Links:');
-    console.log('   Bot: https://t.me/Somania_MiniHub_bot');
-    console.log('   Web App: https://somania-minihub.vercel.app/');
-    console.log('   Test Page: https://somania-minihub.vercel.app/telegram-test.html');
+    console.log('   Bot: https://t.me/Somnia_MiniHub_bot');
+    console.log('   Web App: https://Somnia-minihub.vercel.app/');
+    console.log('   Test Page: https://Somnia-minihub.vercel.app/telegram-test.html');
     
     console.log('\n✅ Status check completed!');
     console.log('\n📋 Next Steps:');

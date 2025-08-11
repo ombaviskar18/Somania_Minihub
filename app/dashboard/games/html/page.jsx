@@ -19,14 +19,14 @@ export default function VintageGameGeneratorPage() {
     setGeneratedCode('');
 
     if (!gameRequest.trim()) {
-      setError('Please describe the Somania minigame properly you want to create');
+      setError('Please describe the Somnia minigame properly you want to create');
       return;
     }
 
     setIsLoading(true);
     try {
       const response = await axios.post('/api/html', { 
-        prompt: `Create a Somania minigame black and white game: ${gameRequest}`
+        prompt: `Create a Somnia minigame black and white game: ${gameRequest}`
       }, {
         headers: {
           'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ export default function VintageGameGeneratorPage() {
         <div className="max-w-6xl mx-auto bg-black border-8 border-gray-800 rounded-lg p-8 shadow-[0_0_15px_rgba(128,128,128,0.3)]">
           {/* Title */}
           <h1 className="text-6xl font-bold text-center mb-8 tracking-wider uppercase">
-            Somania AI MiniGame Generator
+            Somnia AI MiniGame Generator
           </h1>
 
           <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6">

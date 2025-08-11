@@ -9,7 +9,7 @@ const Footer = () => {
   useEffect(() => {
     const fetchStarCount = async () => {
       try {
-        const response = await fetch('https://api.github.com/repos/ombaviskar18/Somania_Minihub');
+        const response = await fetch('https://api.github.com/repos/ombaviskar18/Somnia_Minihub');
         const data = await response.json();
         setStarCount(data.stargazers_count || 0);
       } catch (error) {
@@ -31,17 +31,17 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <Image 
                 src="/log.png" 
-                alt="Somania MiniHub Logo" 
+                alt="Somnia MiniHub Logo" 
                 width={42} 
                 height={42}
                 className="rounded-lg hover:rotate-12 transition-transform"
               />
               <h2 className="text-2xl font-bold bg-white bg-clip-text text-transparent">
-                Somania MiniHub
+                Somnia MiniHub
               </h2>
             </div>
             <p className="text-gray-300 text-center lg:text-left max-w-xs">
-              AI-Powered MiniGames Launchpad on Somania Network
+              AI-Powered MiniGames Launchpad on Somnia Network
             </p>
           </div>
 
@@ -69,7 +69,7 @@ const Footer = () => {
               </Link>
 
               <Link
-                href="https://github.com/ombaviskar18/Somania_Minihub"
+                href="https://github.com/ombaviskar18/Somnia_Minihub"
                 className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all"
                 target="_blank"
               >
@@ -79,7 +79,7 @@ const Footer = () => {
               </Link>
 
               <Link
-                href="https://t.me/Somania_Minihub_bot"
+                href="https://t.me/Somnia_Minihub_bot"
                 className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all"
                 target="_blank"
               >
@@ -93,7 +93,7 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <div className="flex items-center gap-3 bg-black/30 px-4 py-2 rounded-full">
                 <Link
-                  href="https://github.com/ombaviskar18/Somania_Minihub"
+                  href="https://github.com/ombaviskar18/Somnia_Minihub"
                   className="flex items-center gap-2 hover:scale-105 transition-transform"
                   target="_blank"
                 >
@@ -108,7 +108,7 @@ const Footer = () => {
               
               <div className="flex items-center gap-3 bg-black/30 px-4 py-2 rounded-full">
                 <Link
-                  href="https://t.me/Somania_Minihub_bot"
+                  href="https://t.me/Somnia_Minihub_bot"
                   className="flex items-center gap-2 hover:scale-105 transition-transform"
                   target="_blank"
                 >
@@ -127,7 +127,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400">
             <div className="flex items-center gap-2">
               <span className="text-sm">🚀 Powered by</span>
-              <span className="font-bold text-blue-300">Somania Network</span>
+              <span className="font-bold text-blue-300">Somnia Network</span>
             </div>
             
             <div className="flex items-center gap-2">
@@ -137,7 +137,7 @@ const Footer = () => {
             </div>
             
             <div className="text-sm">
-              © {new Date().getFullYear()} Somania MiniHub. All rights reserved.
+              © {new Date().getFullYear()} Somnia MiniHub. All rights reserved.
             </div>
           </div>
         </div>

@@ -50,7 +50,7 @@ CRITICAL: Return ONLY pure JavaScript React component code that creates a classi
       messages: [
         {
           role: "system",
-          content: "You are an expert React Somania game component generator. Create pure JavaScript React components with pixelated, black and white aesthetic, using only core React.createElement rendering."
+          content: "You are an expert React Somnia game component generator. Create pure JavaScript React components with pixelated, black and white aesthetic, using only core React.createElement rendering."
         },
         {
           role: "user",

@@ -15,7 +15,7 @@ const VintageGamesLanding = () => {
       title: 'AI MiniGame Generator',
       description: 'Autonomous minigame creation system',
       difficulty: 'Advanced',
-      creator: 'Somania MiniHub Team',
+      creator: 'Somnia MiniHub Team',
       color: 'bg-purple-900',
       textColor: 'text-purple-300',
       fullDescription: 'Our proprietary AI engine generates unique minigames using neural networks trained on decades of gaming data. It combines procedural content generation with player preference analysis to create endlessly engaging experiences.',
@@ -31,10 +31,10 @@ const VintageGamesLanding = () => {
       "title": "Move AI Agent",
       "description": "Next-Gen Compliance System with Move Agent Integration",
       "difficulty": "Advanced",
-      "creator": "Somania MiniHub Team",
+      "creator": "Somnia MiniHub Team",
       "color": "bg-teal-900",
       "textColor": "text-teal-300",
-      "fullDescription": "An advanced security suite powered by the Move Agent Kit, seamlessly integrated with the Somania network. This system leverages AI to monitor transactions and gameplay in real-time, ensuring compliance and security.",
+      "fullDescription": "An advanced security suite powered by the Move Agent Kit, seamlessly integrated with the Somnia network. This system leverages AI to monitor transactions and gameplay in real-time, ensuring compliance and security.",
       "mechanics": [
         "Anomaly detection",
         "Behavioral biometrics",
@@ -47,10 +47,10 @@ const VintageGamesLanding = () => {
       title: 'Create Unique Games',
       description: 'No-code development platform',
       difficulty: 'Medium',
-      creator: 'Somania MiniHub Team',
+      creator: 'Somnia MiniHub Team',
       color: 'bg-indigo-900',
       textColor: 'text-blue-300',
-      fullDescription: 'Full-stack development environment with drag-and-drop interface and smart contracts integration. Includes testing sandbox, asset library, and one-click deployment to Somania blockchain.',
+      fullDescription: 'Full-stack development environment with drag-and-drop interface and smart contracts integration. Includes testing sandbox, asset library, and one-click deployment to Somnia blockchain.',
       mechanics: [
         'Visual scripting system',
         'Smart contract templates',
@@ -64,12 +64,12 @@ const VintageGamesLanding = () => {
       description: 'Tokenize the minigames for stakeholders',
       difficulty: 'Expert',
       era:'Upcoming!', 
-      creator: 'Somania MiniHub Team',
+      creator: 'Somnia MiniHub Team',
       color: 'bg-blue-900',
       textColor: 'text-indigo-300',
       fullDescription: 'Implement systems that allow users to tokenize their minigames, facilitating co-ownership and revenue-sharing models.',
       mechanics: [
-        'Somania integration',
+        'Somnia integration',
         'Co-creation rewards',
         'Liquidity pools',
         'DAO governance'
@@ -81,7 +81,7 @@ const VintageGamesLanding = () => {
       description: 'Real-time competitive system',
       difficulty: 'Medium',
       era:'Upcoming!', 
-      creator: 'Somania MiniHub Team',
+      creator: 'Somnia MiniHub Team',
       color: 'bg-orange-900',
       textColor: 'text-orange-300',
       fullDescription: 'Adaptive leaderboard system with seasonal competitions and skill-based matchmaking. Features cross-game rankings and NFT-based achievements.',
@@ -151,7 +151,7 @@ const VintageGamesLanding = () => {
         <div className="flex flex-col items-center justify-center min-h-screen">
           <img
             src="/pc.gif"
-            alt="Somania MiniHub"
+            alt="Somnia MiniHub"
             width={202}
             height={202}
             className="mb-6"
@@ -161,7 +161,7 @@ const VintageGamesLanding = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-6xl md:text-8xl font-bold tracking-wider uppercase text-center"
           >
-                      Somania MiniHub <span className="text-gray-500 animate-in">Minigames launchpad</span>
+                      Somnia MiniHub <span className="text-gray-500 animate-in">Minigames launchpad</span>
           </motion.h1>
         </div>
           <motion.p
@@ -170,7 +170,7 @@ const VintageGamesLanding = () => {
             transition={{ delay: 0.5 }}
             className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto"
           >
-            Launch, Play, Innovate: AI Minigames on Somania using Somania MiniHub  
+            Launch, Play, Innovate: AI Minigames on Somnia using Somnia MiniHub  
           </motion.p>
           <Link href="/dashboard">
           <motion.button
@@ -258,7 +258,7 @@ const VintageGamesLanding = () => {
           <h5 className="text-2xl mb-4">Technical Specifications</h5>
           <div className="bg-black/30 p-4 rounded">
             <p>Developer: {gameLibrary.find(g => g.id === activeGame).creator}</p>
-            <p>Blockchain: Somania Network</p>
+            <p>Blockchain: Somnia Network</p>
             <p>AI Model: GPT-4 Turbo</p>
           </div>
         </div>
@@ -314,7 +314,7 @@ const VintageGamesLanding = () => {
         <h2 className="text-5xl font-bold mb-12">Our Mission</h2>
         <div className="max-w-4xl mx-auto">
         <p className="text-xl text-gray-400 mb-8">
-          At Somania Minihub, we empower users to become creators, enabling them to generate unique minigames using AI agents. Our platform fosters creativity and rewards engagement, allowing users to play and earn points within the vibrant Somania ecosystem.
+          At Somnia Minihub, we empower users to become creators, enabling them to generate unique minigames using AI agents. Our platform fosters creativity and rewards engagement, allowing users to play and earn points within the vibrant Somnia ecosystem.
         </p>
 
           <Link href="/dashboard">

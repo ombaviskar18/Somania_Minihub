@@ -12,8 +12,8 @@ const pressStart2P = Press_Start_2P({
 });
 
 export const metadata = {
-  title: "Somania MiniHub",
-  description: "Generate or edit minigames using Somania Agent",
+  title: "Somnia MiniHub",
+  description: "Generate or edit minigames using Somnia Agent",
 };
 
 export default function RootLayout({ children }) {

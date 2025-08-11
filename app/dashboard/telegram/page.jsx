@@ -30,7 +30,7 @@ const Telegram = () => {
     {
       icon: '🎮',
       title: 'Instant Gaming',
-      description: 'Play all Somania MiniHub games directly in Telegram'
+      description: 'Play all Somnia MiniHub games directly in Telegram'
     },
     {
       icon: '💰',
@@ -50,7 +50,7 @@ const Telegram = () => {
   ];
 
   const commands = [
-    { command: '/start', description: 'Launch Somania MiniHub' },
+    { command: '/start', description: 'Launch Somnia MiniHub' },
     { command: '/games', description: 'View available games' },
     { command: '/stats', description: 'Platform statistics' },
     { command: '/leaderboard', description: 'Top players' },
@@ -93,11 +93,11 @@ const Telegram = () => {
             📱 Telegram Gaming Bot
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Experience Somania MiniHub directly in Telegram! Play games, earn rewards, and manage your AI agent - all in one place.
+            Experience Somnia MiniHub directly in Telegram! Play games, earn rewards, and manage your AI agent - all in one place.
           </p>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-            <Link href="https://t.me/Somania_Minihub_bot">
+            <Link href="https://t.me/Somnia_Minihub_bot">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -205,9 +205,9 @@ const Telegram = () => {
               <div>
                 <h3 className="text-xl font-bold text-cyan-400 mb-4">🤖 Bot Information</h3>
                 <div className="space-y-2 text-gray-300">
-                  <p><strong>Bot Username:</strong> @Somania_Minihub_bot</p>
+                  <p><strong>Bot Username:</strong> @Somnia_Minihub_bot</p>
                   <p><strong>Bot Token:</strong> 8306788744:AAE***</p>
-                  <p><strong>Web App URL:</strong> http://somania-minihub.vercel.app/</p>
+                  <p><strong>Web App URL:</strong> http://Somnia-minihub.vercel.app/</p>
                   <p><strong>Webhook:</strong> /api/telegram/webhook</p>
                 </div>
               </div>
@@ -215,7 +215,7 @@ const Telegram = () => {
               <div>
                 <h3 className="text-xl font-bold text-cyan-400 mb-4">⚡ Quick Actions</h3>
                 <div className="space-y-3">
-                  <Link href="https://t.me/Somania_Minihub_bot">
+                  <Link href="https://t.me/Somnia_Minihub_bot">
                     <button className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-4 py-2 rounded-lg font-bold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300">
                       Open Bot in Telegram
                     </button>
@@ -245,7 +245,7 @@ const Telegram = () => {
           <p className="text-xl text-gray-300 mb-6">
             Join thousands of players gaming directly in Telegram
           </p>
-          <Link href="https://t.me/Somania_Minihub_bot">
+          <Link href="https://t.me/Somnia_Minihub_bot">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

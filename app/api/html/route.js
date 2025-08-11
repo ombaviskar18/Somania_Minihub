@@ -36,7 +36,7 @@ export async function POST(req) {
         The code should start directly with either <!DOCTYPE html> or <div class="game-container"> and contain only the game implementation.`
       }, {
         role: "user",
-        content: `Create a Somania Minigames by Ai agent: ${prompt}`
+        content: `Create a Somnia Minigames by Ai agent: ${prompt}`
       }],
       temperature: 0.7,
       max_tokens: 1000,

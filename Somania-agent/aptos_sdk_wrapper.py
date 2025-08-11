@@ -1,15 +1,15 @@
-print("Somania SDK wrapper loaded in test mode")
+print("Somnia SDK wrapper loaded in test mode")
 import os
 import requests
-from Somania _sdk.account import Account, AccountAddress
-from Somania _sdk.async_client import FaucetClient, RestClient
-from Somania _sdk.transactions import EntryFunction, TransactionArgument, TransactionPayload
-from Somania _sdk.bcs import Serializer
+from Somnia _sdk.account import Account, AccountAddress
+from Somnia _sdk.async_client import FaucetClient, RestClient
+from Somnia _sdk.transactions import EntryFunction, TransactionArgument, TransactionPayload
+from Somnia _sdk.bcs import Serializer
 
 # Initialize clients for devnet (changed from testnet)
-NODE_URL = "https://api.devnet.Somania labs.com/v1"
+NODE_URL = "https://api.devnet.Somnia labs.com/v1"
 rest_client = RestClient(NODE_URL)
-faucet_client = FaucetClient("https://faucet.devnet.Somania labs.com", rest_client)
+faucet_client = FaucetClient("https://faucet.devnet.Somnia labs.com", rest_client)
 
 async def get_account_modules(address: str, limit: int = 10):
     """
@@ -20,7 +20,7 @@ async def get_account_modules(address: str, limit: int = 10):
     
     # Add '?limit={limit}' for server-side pagination.
     # Then if the account has more than 'limit' modules, the server might
-    # provide an "X-Somania -Cursor" header for further pages (if needed).
+    # provide an "X-Somnia -Cursor" header for further pages (if needed).
     url = f"{NODE_URL}/accounts/{address}/modules?limit={limit}"
 
     try:
@@ -58,7 +58,7 @@ async def get_account_modules(address: str, limit: int = 10):
 
         # If the server truncated results to 'limit' behind the scenes,
         # you might want to add a note. You can glean if there's more from
-        # the "X-Somania -Cursor" header, but let's keep it simple:
+        # the "X-Somnia -Cursor" header, but let's keep it simple:
         return {
             "modules": summarized_modules,
             "note": (
@@ -140,7 +140,7 @@ import requests
 
 async def get_account_resources(address: str):
     """Gets all resources associated with an account using direct API call."""
-    NODE_URL = "https://api.devnet.Somania labs.com/v1"  # Update for the correct network
+    NODE_URL = "https://api.devnet.Somnia labs.com/v1"  # Update for the correct network
     try:
         # Use direct API call to fetch resources
         url = f"{NODE_URL}/accounts/{address}/resources"

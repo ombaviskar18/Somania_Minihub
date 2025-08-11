@@ -53,7 +53,7 @@ function Header() {
             <Link href="/" className='flex items-center cursor-pointer'>
                 <Image src="/log.png" alt="Logo" width={42} height={42} />
                 <span className='text-2xl font-bold text-gray-400 hover:text-gray-700 transition-colors mb-2 ml-2'>
-                Somania MiniHub
+                Somnia MiniHub
                 </span>
             </Link>
 
@@ -67,7 +67,7 @@ function Header() {
                 <Link href={"/dashboard/agent"}>
                     <li className={`text-gray-400 font-bold hover:text-purple-400 transition-all cursor-pointer
                     ${path === '/dashboard/agent' && 'text-purple-400 font-bold'}
-                    `}>Somania Agent</li>
+                    `}>Somnia Agent</li>
                 </Link>
                 <Link href={"/dashboard/leaderboard"}>
                     <li className={`text-gray-400 font-bold hover:text-purple-400 transition-all cursor-pointer

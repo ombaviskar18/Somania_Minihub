@@ -33,7 +33,7 @@ const Dashboard = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-6xl md:text-6xl font-bold mb-6 tracking-wider uppercase text-center bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent"
         >
-          Somania MiniGames <span className="text-gray-500 animate-in">By Agent</span>
+          Somnia MiniGames <span className="text-gray-500 animate-in">By Agent</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -41,7 +41,7 @@ const Dashboard = () => {
           transition={{ delay: 0.5 }}
           className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto text-center"
         >
-          Welcome to the ultimate gaming hub on Somania Network. Play AI-powered minigames, earn STT rewards, and create your own games with our intelligent agent system.
+          Welcome to the ultimate gaming hub on Somnia Network. Play AI-powered minigames, earn STT rewards, and create your own games with our intelligent agent system.
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl">

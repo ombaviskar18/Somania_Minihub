@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const SomaniaAgent = () => {
+const SomniaAgent = () => {
   const features = [
     {
       title: "Autonomous Game Management",
@@ -13,7 +13,7 @@ const SomaniaAgent = () => {
     },
     {
       title: "Revenue Generation",
-      description: "Generate passive income through automated trading, yield farming, and smart contract interactions on Somania Network.",
+      description: "Generate passive income through automated trading, yield farming, and smart contract interactions on Somnia Network.",
       icon: "💰"
     },
     {
@@ -94,7 +94,7 @@ const SomaniaAgent = () => {
           >
             <Image 
               src="/agent.png" 
-              alt="Somania Agent" 
+              alt="Somnia Agent" 
               width={200}
               height={200}
               className="rounded-lg shadow-lg shadow-purple-500/50 hover:shadow-purple-500/80 transition-all duration-300"
@@ -102,10 +102,10 @@ const SomaniaAgent = () => {
           </motion.div>
           
           <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-wider uppercase bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-            Somania Agent
+            Somnia Agent
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            The future of autonomous gaming and revenue generation on Somania Network. 
+            The future of autonomous gaming and revenue generation on Somnia Network. 
             Our AI agent handles everything while you earn passive income.
           </p>
           
@@ -213,7 +213,7 @@ const SomaniaAgent = () => {
           className="mb-20"
         >
           <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            How Somania Agent Works
+            How Somnia Agent Works
           </h2>
           
           <div className="max-w-4xl mx-auto">
@@ -222,7 +222,7 @@ const SomaniaAgent = () => {
                 {
                   step: "01",
                   title: "Deploy Your Agent",
-                  description: "Connect your wallet and deploy your personal Somania Agent with customizable parameters and risk settings."
+                  description: "Connect your wallet and deploy your personal Somnia Agent with customizable parameters and risk settings."
                 },
                 {
                   step: "02", 
@@ -268,7 +268,7 @@ const SomaniaAgent = () => {
           className="text-center bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-xl p-12 border border-purple-500/30"
         >
           <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            🚀 Launching Soon on Somania Network
+            🚀 Launching Soon on Somnia Network
           </h2>
           <p className="text-xl text-gray-300 mb-6">
             Be among the first to experience autonomous gaming and revenue generation
@@ -295,4 +295,4 @@ const SomaniaAgent = () => {
   );
 };
 
-export default SomaniaAgent;
+export default SomniaAgent;

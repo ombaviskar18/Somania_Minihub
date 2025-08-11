@@ -10,7 +10,7 @@ const LeaderBoard = () => {
   const leaderboardData = {
     overall: [
       { rank: 1, name: "CryptoGamer_99", score: 125450, games: 342, rewards: "2,450 SMT", avatar: "👑" },
-      { rank: 2, name: "SomaniaKing", score: 98720, games: 287, rewards: "1,890 SMT", avatar: "🥈" },
+      { rank: 2, name: "SomniaKing", score: 98720, games: 287, rewards: "1,890 SMT", avatar: "🥈" },
       { rank: 3, name: "BlockchainPro", score: 87650, games: 245, rewards: "1,650 SMT", avatar: "🥉" },
       { rank: 4, name: "GameMaster2024", score: 76543, games: 198, rewards: "1,420 SMT", avatar: "⭐" },
       { rank: 5, name: "AIChallenger", score: 65432, games: 176, rewards: "1,200 SMT", avatar: "🎯" },
@@ -85,11 +85,11 @@ const LeaderBoard = () => {
           </motion.div>
 
           <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-            🏆 Somania Leaderboard
+            🏆 Somnia Leaderboard
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Compete with players worldwide on Somania Network. Climb the ranks, earn rewards, and become a legend!
+            Compete with players worldwide on Somnia Network. Climb the ranks, earn rewards, and become a legend!
           </p>
         </motion.div>
 

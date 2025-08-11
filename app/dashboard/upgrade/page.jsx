@@ -35,7 +35,7 @@ const UpgradePage = () => {
       popular: true,
       features: [
         "Access to 100+ premium games",
-        "Advanced AI-powered Somania game hosting",
+        "Advanced AI-powered Somnia game hosting",
         "Priority matchmaking",
         "Exclusive tournaments",
         "Advanced analytics dashboard",
@@ -51,7 +51,7 @@ const UpgradePage = () => {
       icon: "👑"
     },
     {
-      name: "Somania Elite",
+      name: "Somnia Elite",
       description: "Ultimate gaming experience",
       monthlyPrice: 49.99,
       yearlyPrice: 499.99,
@@ -65,7 +65,7 @@ const UpgradePage = () => {
         "Early access to new features",
         "Custom smart contract deployment",
         "5x reward multiplier",
-        "Exclusive Somania Elite NFTs",
+        "Exclusive Somnia Elite NFTs",
         "Revenue sharing program"
       ],
       buttonText: "Contact Sales",
@@ -134,10 +134,10 @@ const UpgradePage = () => {
           </motion.div>
           
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-            💎 Somania Pricing
+            💎 Somnia Pricing
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Unlock the full potential of Somania Network gaming. Choose the perfect plan for your gaming journey.
+            Unlock the full potential of Somnia Network gaming. Choose the perfect plan for your gaming journey.
           </p>
           
           {/* Billing Toggle */}
@@ -245,7 +245,7 @@ const UpgradePage = () => {
                 disabled={plan.buttonDisabled}
                 onClick={() => {
                   if (!plan.buttonDisabled) {
-                    alert(`${plan.name} plan will be available soon on Somania Network!`);
+                    alert(`${plan.name} plan will be available soon on Somnia Network!`);
                   }
                 }}
               >
@@ -301,12 +301,12 @@ const UpgradePage = () => {
           <div className="space-y-6">
             {[
               {
-                question: "What is Somania Network?",
-                answer: "Somania is a high-performance, EVM-compatible Layer 1 blockchain capable of processing over 1 million TPS with sub-second finality, perfect for gaming applications."
+                question: "What is Somnia Network?",
+                answer: "Somnia is a high-performance, EVM-compatible Layer 1 blockchain capable of processing over 1 million TPS with sub-second finality, perfect for gaming applications."
               },
               {
                 question: "How do I pay with STT tokens?",
-                answer: "You can pay for subscriptions using STT (Somania Test Tokens) directly from your connected wallet. We also accept major cryptocurrencies and fiat payments."
+                answer: "You can pay for subscriptions using STT (Somnia Test Tokens) directly from your connected wallet. We also accept major cryptocurrencies and fiat payments."
               },
               {
                 question: "Can I change my plan anytime?",
@@ -342,7 +342,7 @@ const UpgradePage = () => {
             🚀 Ready to Level Up Your Gaming?
           </h2>
           <p className="text-xl text-gray-300 mb-6">
-            Join thousands of gamers already earning on Somania Network
+            Join thousands of gamers already earning on Somnia Network
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <motion.button

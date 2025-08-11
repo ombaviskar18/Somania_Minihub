@@ -28,7 +28,7 @@
 
   "build": {
     "env": {
-      "NEXT_PUBLIC_APP_URL": "https://somania-minihub.vercel.app/"
+      "NEXT_PUBLIC_APP_URL": "https://Somnia-minihub.vercel.app/"
     }
   }
 }

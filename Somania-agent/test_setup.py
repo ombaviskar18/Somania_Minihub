@@ -18,23 +18,23 @@ def test_openai_connection():
         print(f"OpenAI Connection Error: {str(e)}")
         return False
 
-def test_Somania _connection():
-    """Test Somania connection"""
+def test_Somnia _connection():
+    """Test Somnia connection"""
     from agents import get_balance_in_apt_sync
     try:
         balance = get_balance_in_apt_sync()
-        print(f"Somania Connection Test - Balance: {balance}")
+        print(f"Somnia Connection Test - Balance: {balance}")
         return True
     except Exception as e:
-        print(f"Somania Connection Error: {str(e)}")
+        print(f"Somnia Connection Error: {str(e)}")
         return False
 
 if __name__ == "__main__":
     print("Testing connections...")
     openai_ok = test_openai_connection()
-    Somania _ok = test_Somania _connection()
+    Somnia _ok = test_Somnia _connection()
     
-    if openai_ok and Somania _ok:
+    if openai_ok and Somnia _ok:
         print("\n✅ All connections successful!")
     else:
         print("\n❌ Some connections failed. Check errors above.")

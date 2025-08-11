@@ -6,11 +6,11 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 /**
- * @title SomaniaMiniHub
- * @dev Main contract for Somania MiniHub gaming platform
- * @notice Handles game registration, scoring, and rewards on Somania Network
+ * @title SomniaMiniHub
+ * @dev Main contract for Somnia MiniHub gaming platform
+ * @notice Handles game registration, scoring, and rewards on Somnia Network
  */
-contract SomaniaMiniHub is ReentrancyGuard, Ownable {
+contract SomniaMiniHub is ReentrancyGuard, Ownable {
     
     // Game structure
     struct Game {
@@ -60,7 +60,7 @@ contract SomaniaMiniHub is ReentrancyGuard, Ownable {
     uint256 public constant PLATFORM_FEE = 500; // 5% platform fee
     uint256 public constant BASIS_POINTS = 10000;
     
-    IERC20 public sttToken; // Somania Test Token
+    IERC20 public sttToken; // Somnia Test Token
     
     modifier onlyRegisteredPlayer() {
         require(players[msg.sender].registered, "Player not registered");

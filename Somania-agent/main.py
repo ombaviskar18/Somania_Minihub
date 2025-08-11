@@ -1,8 +1,8 @@
 import os
 from dotenv import load_dotenv, set_key
 from swarm.repl import run_demo_loop
-from agents import close_event_loop, Somania _agent
-from Somania _sdk.account import Account
+from agents import close_event_loop, Somnia _agent
+from Somnia _sdk.account import Account
 import asyncio
 
 def check_and_update_env():
@@ -31,6 +31,6 @@ def check_and_update_env():
 if __name__ == "__main__":
     try:
         check_and_update_env()
-        asyncio.run(run_demo_loop(Somania _agent, stream=True))
+        asyncio.run(run_demo_loop(Somnia _agent, stream=True))
     finally:
         close_event_loop()

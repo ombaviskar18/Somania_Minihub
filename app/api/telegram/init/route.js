@@ -2,8 +2,8 @@ import { NextResponse } from 'next/server';
 
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || 'Your_Token';
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`;
-const WEBHOOK_URL = `${process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app'}/api/telegram/webhook`;
-const WEB_APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app/';
+const WEBHOOK_URL = `${process.env.NEXT_PUBLIC_APP_URL || 'https://Somnia-minihub.vercel.app'}/api/telegram/webhook`;
+const WEB_APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://Somnia-minihub.vercel.app/';
 
 async function makeRequest(endpoint, data = {}) {
   try {
@@ -25,7 +25,7 @@ async function makeRequest(endpoint, data = {}) {
 
 export async function POST() {
   try {
-    console.log('🚀 Initializing Somania MiniHub Telegram Bot...');
+    console.log('🚀 Initializing Somnia MiniHub Telegram Bot...');
     
     const results = [];
     
@@ -46,7 +46,7 @@ export async function POST() {
     // 3. Set bot commands
     console.log('3️⃣ Setting bot commands...');
     const commands = [
-      { command: 'start', description: '🎮 Launch Somania MiniHub' },
+      { command: 'start', description: '🎮 Launch Somnia MiniHub' },
       { command: 'games', description: '🎯 View available games' },
       { command: 'stats', description: '📊 Platform statistics' },
       { command: 'leaderboard', description: '🏆 View top players' },
@@ -63,7 +63,7 @@ export async function POST() {
     const menuResult = await makeRequest('setChatMenuButton', {
       menu_button: {
         type: 'web_app',
-        text: '🎮 Somania Games',
+        text: '🎮 Somnia Games',
         web_app: { url: WEB_APP_URL }
       }
     });
@@ -72,13 +72,13 @@ export async function POST() {
     // 5. Set bot name
     console.log('5️⃣ Setting bot name...');
     const nameResult = await makeRequest('setMyName', {
-      name: 'Somania MiniHub'
+      name: 'Somnia MiniHub'
     });
     results.push({ action: 'setMyName', result: nameResult });
     
     // 6. Set bot description
     console.log('6️⃣ Setting bot description...');
-    const description = `🎮 Somania MiniHub - AI-powered gaming platform on Somania Network!
+    const description = `🎮 Somnia MiniHub - AI-powered gaming platform on Somnia Network!
 
 🚀 Experience the future of blockchain gaming:
 • 15+ AI-powered mini-games
@@ -87,7 +87,7 @@ export async function POST() {
 • Compete on global leaderboards
 • Real-time multiplayer gaming
 
-🌟 Built on Somania Network - the fastest EVM-compatible blockchain with 1M+ TPS!
+🌟 Built on Somnia Network - the fastest EVM-compatible blockchain with 1M+ TPS!
 
 Click the menu button or send /start to begin your gaming journey!`;
     
@@ -96,7 +96,7 @@ Click the menu button or send /start to begin your gaming journey!`;
     
     // 7. Set short description
     console.log('7️⃣ Setting short description...');
-    const shortDescription = '🎮 AI-powered gaming platform on Somania Network. Play games, earn SMT tokens, deploy AI agents!';
+    const shortDescription = '🎮 AI-powered gaming platform on Somnia Network. Play games, earn SMT tokens, deploy AI agents!';
     
     const shortDescResult = await makeRequest('setMyShortDescription', { 
       short_description: shortDescription 
@@ -110,16 +110,16 @@ Click the menu button or send /start to begin your gaming journey!`;
     
     return NextResponse.json({
       success: true,
-      message: '🎉 Somania MiniHub Telegram Bot initialized successfully!',
+      message: '🎉 Somnia MiniHub Telegram Bot initialized successfully!',
       bot_info: {
-        username: '@Somania_MiniHub_bot',
-        bot_link: 'https://t.me/Somania_MiniHub_bot',
+        username: '@Somnia_MiniHub_bot',
+        bot_link: 'https://t.me/Somnia_MiniHub_bot',
         web_app_url: WEB_APP_URL,
         webhook_url: WEBHOOK_URL
       },
       results: results,
       next_steps: [
-        '1. Open https://t.me/Somania_MiniHub_bot',
+        '1. Open https://t.me/Somnia_MiniHub_bot',
         '2. Send /start to test the bot',
         '3. Click the menu button to launch the web app',
         '4. Try various commands to test functionality'
@@ -149,7 +149,7 @@ export async function GET() {
       bot_info: botInfo,
       webhook_info: webhookInfo,
       initialization_url: 'POST to this endpoint to initialize the bot',
-      bot_link: 'https://t.me/Somania_MiniHub_bot'
+      bot_link: 'https://t.me/Somnia_MiniHub_bot'
     });
     
   } catch (error) {

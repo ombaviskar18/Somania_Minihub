@@ -7,11 +7,11 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 
 /**
- * @title SomaniaToken
- * @dev ERC20 token for Somania MiniHub ecosystem
+ * @title SomniaToken
+ * @dev ERC20 token for Somnia MiniHub ecosystem
  * @notice This token is used for rewards, staking, and governance in the platform
  */
-contract SomaniaToken is ERC20, ERC20Burnable, Ownable, Pausable {
+contract SomniaToken is ERC20, ERC20Burnable, Ownable, Pausable {
     
     // Token configuration
     uint256 public constant MAX_SUPPLY = 1000000000 * 10**18; // 1 billion tokens
@@ -47,7 +47,7 @@ contract SomaniaToken is ERC20, ERC20Burnable, Ownable, Pausable {
         address _rewardPool,
         address _stakingContract,
         address _treasuryWallet
-    ) ERC20("Somania Token", "SMT") {
+    ) ERC20("Somnia Token", "SMT") {
         require(_rewardPool != address(0), "Invalid reward pool address");
         require(_stakingContract != address(0), "Invalid staking contract address");
         require(_treasuryWallet != address(0), "Invalid treasury wallet address");

@@ -1,10 +1,10 @@
-# Setting Up Your First Somania AI Agent: A Guide for JavaScript Developers
+# Setting Up Your First Somnia AI Agent: A Guide for JavaScript Developers
 
-This tutorial will help you create an AI-powered blockchain assistant using Python and the Somania blockchain. Think of it as building your own `ethers.js`-like interface, but with AI capabilities built in.
+This tutorial will help you create an AI-powered blockchain assistant using Python and the Somnia blockchain. Think of it as building your own `ethers.js`-like interface, but with AI capabilities built in.
 
 By the end of this tutorial, you'll have:
 1. A working Python development environment (similar to your Node.js setup)
-2. A basic AI agent that can interact with the Somania blockchain
+2. A basic AI agent that can interact with the Somnia blockchain
 3. A local test environment for blockchain development
 
 > [!NOTE]  
@@ -29,8 +29,8 @@ You'll need:
 
 1. Create your project directory:
     ```bash
-    mkdir Somania -agent
-    cd Somania -agent
+    mkdir Somnia -agent
+    cd Somnia -agent
     ```
 
 2. Initialize git:
@@ -103,7 +103,7 @@ In Python, we isolate project dependencies using virtual environments (similar t
 3. Install dependencies:
     ```bash
     python -m pip install --upgrade pip
-    pip install python-dotenv requests requests-oauthlib openai Somania -sdk
+    pip install python-dotenv requests requests-oauthlib openai Somnia -sdk
     pip freeze > requirements.txt
     ```
 
@@ -123,13 +123,13 @@ Now let's create our agent's core files:
     ```python
     from dotenv import load_dotenv
     from swarm.repl import run_demo_loop
-    from agents import close_event_loop, Somania _agent
+    from agents import close_event_loop, Somnia _agent
     import asyncio
 
     if __name__ == "__main__":
         try:
             load_dotenv()
-            asyncio.run(run_demo_loop(Somania _agent, stream=True))
+            asyncio.run(run_demo_loop(Somnia _agent, stream=True))
         finally:
             close_event_loop()
     ```
@@ -151,8 +151,8 @@ Now let's create our agent's core files:
     ```python
     import os
     from dotenv import load_dotenv
-    from Somania _sdk.account import Account
-    from Somania _sdk_wrapper import get_balance, fund_wallet, transfer, create_token
+    from Somnia _sdk.account import Account
+    from Somnia _sdk_wrapper import get_balance, fund_wallet, transfer, create_token
     from swarm import Agent
 
     # Load environment variables
@@ -164,12 +164,12 @@ Now let's create our agent's core files:
     address = str(wallet.address())
 
     # Initialize the agent
-    Somania _agent = Agent(
-        name="Somania Agent",
+    Somnia _agent = Agent(
+        name="Somnia Agent",
         model="gpt-3.5-turbo",
         api_key=os.getenv('OPENAI_API_KEY'),
         instructions=(
-            "You are a helpful agent that can interact with the Somania blockchain. "
+            "You are a helpful agent that can interact with the Somnia blockchain. "
             "You can perform token transfers and create custom tokens. "
             f"Your wallet address is {address}. "
         ),
@@ -197,7 +197,7 @@ Now let's create our agent's core files:
     ```
     What can you help me with?
     Check my wallet balance
-    What is Somania ?
+    What is Somnia ?
     ```
 
 > [!NOTE]  
@@ -224,9 +224,9 @@ Now let's create our agent's core files:
 ## Next Steps
 
 Now that you have a working AI agent, you can:
-1. [Learn more about Somania development](https://Somania .dev)
-2. [Explore the Somania SDK documentation](https://Somania .dev/sdks/python-sdk)
-3. [Join the Somania Discord](https://discord.gg/Somania labs)
+1. [Learn more about Somnia development](https://Somnia .dev)
+2. [Explore the Somnia SDK documentation](https://Somnia .dev/sdks/python-sdk)
+3. [Join the Somnia Discord](https://discord.gg/Somnia labs)
 
 Remember to deactivate your virtual environment when done:
 ```bash
@@ -236,6 +236,6 @@ deactivate
 > [!TIP]  
 > When you come back to work on the project:
 > ```bash
-> cd Somania -agent
+> cd Somnia -agent
 > source venv/bin/activate  # or .\venv\Scripts\activate on Windows
 > ```

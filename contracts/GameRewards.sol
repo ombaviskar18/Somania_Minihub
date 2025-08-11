@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 /**
  * @title GameRewards
- * @dev Manages reward distribution for Somania MiniHub games
+ * @dev Manages reward distribution for Somnia MiniHub games
  * @notice Handles different reward tiers and distribution mechanisms
  */
 contract GameRewards is ReentrancyGuard, Ownable {

@@ -30,7 +30,7 @@ export async function POST(request) {
           
         case '/games':
           await sendMessage(chatId, `
-🎮 <b>Available Games on Somania MiniHub:</b>
+🎮 <b>Available Games on Somnia MiniHub:</b>
 
 🔥 <b>AI-Powered Games:</b>
 • Connect Four AI
@@ -57,7 +57,7 @@ Ready to play? Click the button below! 👇
                 [
                   {
                     text: '🎮 Play Games Now',
-                    web_app: { url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app/'}dashboard` }
+                    web_app: { url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://Somnia-minihub.vercel.app/'}dashboard` }
                   }
                 ]
               ]
@@ -71,11 +71,11 @@ Ready to play? Click the button below! 👇
           
         case '/leaderboard':
           await sendMessage(chatId, `
-🏆 <b>Somania MiniHub Leaderboard</b>
+🏆 <b>Somnia MiniHub Leaderboard</b>
 
 🥇 <b>Top Players:</b>
 1. CryptoGamer_99 - 125,450 pts
-2. SomaniaKing - 98,720 pts  
+2. SomniaKing - 98,720 pts  
 3. BlockchainPro - 87,650 pts
 4. GameMaster2024 - 76,543 pts
 5. AIChallenger - 65,432 pts
@@ -91,7 +91,7 @@ View full leaderboard and compete! 🚀
                 [
                   {
                     text: '🏆 View Full Leaderboard',
-                    web_app: { url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app/'}dashboard/leaderboard` }
+                    web_app: { url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://Somnia-minihub.vercel.app/'}dashboard/leaderboard` }
                   }
                 ]
               ]
@@ -101,7 +101,7 @@ View full leaderboard and compete! 🚀
           
         case '/agent':
           await sendMessage(chatId, `
-🤖 <b>Somania AI Agent</b>
+🤖 <b>Somnia AI Agent</b>
 
 🚀 <b>Autonomous Gaming & Revenue Generation</b>
 
@@ -120,14 +120,14 @@ View full leaderboard and compete! 🚀
 • Cross-Chain Integration
 • Revenue Maximization
 
-Coming Soon on Somania Network! 🌟
+Coming Soon on Somnia Network! 🌟
           `, {
             reply_markup: {
               inline_keyboard: [
                 [
                   {
                     text: '🤖 Learn More About AI Agent',
-                    web_app: { url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app/'}dashboard/agent` }
+                    web_app: { url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://Somnia-minihub.vercel.app/'}dashboard/agent` }
                   }
                 ]
               ]
@@ -137,7 +137,7 @@ Coming Soon on Somania Network! 🌟
           
         case '/pricing':
           await sendMessage(chatId, `
-💎 <b>Somania MiniHub Pricing</b>
+💎 <b>Somnia MiniHub Pricing</b>
 
 🆓 <b>Starter Plan - FREE</b>
 • Access to 10 basic games
@@ -151,7 +151,7 @@ Coming Soon on Somania Network! 🌟
 • 2x reward multiplier
 • NFT game assets
 
-🚀 <b>Somania Elite - $49.99/month</b>
+🚀 <b>Somnia Elite - $49.99/month</b>
 • Unlimited game access
 • Custom AI agent deployment
 • White-label solutions
@@ -165,7 +165,7 @@ Coming Soon on Somania Network! 🌟
                 [
                   {
                     text: '💎 View All Plans',
-                    web_app: { url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app/'}dashboard/upgrade` }
+                    web_app: { url: `${process.env.NEXT_PUBLIC_APP_URL || 'https://Somnia-minihub.vercel.app/'}dashboard/upgrade` }
                   }
                 ]
               ]
@@ -184,7 +184,7 @@ Coming Soon on Somania Network! 🌟
 
 I didn't understand that command. Here's what I can help you with:
 
-🎮 /start - Launch Somania MiniHub
+🎮 /start - Launch Somnia MiniHub
 🎯 /games - View available games  
 📊 /stats - Platform statistics
 🏆 /leaderboard - Top players
@@ -199,7 +199,7 @@ Or use the menu button to access all features! 👇
                 [
                   {
                     text: '🎮 Launch Game',
-                    web_app: { url: process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app/' }
+                    web_app: { url: process.env.NEXT_PUBLIC_APP_URL || 'https://Somnia-minihub.vercel.app/' }
                   }
                 ]
               ]
@@ -216,7 +216,7 @@ Or use the menu button to access all features! 👇
       // Handle different callback actions
       switch (data) {
         case 'play_games':
-          await sendMessage(chatId, '🎮 Launching Somania MiniHub games...');
+          await sendMessage(chatId, '🎮 Launching Somnia MiniHub games...');
           break;
         case 'view_stats':
           await sendGameStats(chatId);
@@ -240,8 +240,8 @@ Or use the menu button to access all features! 👇
 // Handle GET requests (for webhook verification)
 export async function GET() {
   return NextResponse.json({ 
-    status: 'Somania MiniHub Telegram Bot is running!',
+    status: 'Somnia MiniHub Telegram Bot is running!',
     timestamp: new Date().toISOString(),
-    webhook_url: 'https://somania-minihub.vercel.app/api/telegram/webhook'
+    webhook_url: 'https://Somnia-minihub.vercel.app/api/telegram/webhook'
   });
 }

@@ -1,6 +1,6 @@
-# Setting Up Your First Somania Chat Agent - A Comprehensive Guide
+# Setting Up Your First Somnia Chat Agent - A Comprehensive Guide
 
-Welcome! This tutorial will guide you through creating an AI-powered chat agent that understands Somania blockchain concepts. We'll focus on getting a working conversation system first, laying the groundwork for future blockchain interactions.
+Welcome! This tutorial will guide you through creating an AI-powered chat agent that understands Somnia blockchain concepts. We'll focus on getting a working conversation system first, laying the groundwork for future blockchain interactions.
 
 > [!NOTE]
 > 💡 **Coming from Web2 or Ethereum?** Throughout this guide, we'll provide analogies to help you understand Python concepts:
@@ -13,7 +13,7 @@ Welcome! This tutorial will guide you through creating an AI-powered chat agent 
 Think of this project like training a new blockchain expert:
 1. First, we give them knowledge (AI language model)
 2. Then, we teach them how to communicate (chat interface)
-3. Later, we'll give them tools to interact with the blockchain (Somania SDK)
+3. Later, we'll give them tools to interact with the blockchain (Somnia SDK)
 
 This tutorial focuses on steps 1 and 2, getting you to your first conversation!
 
@@ -33,8 +33,8 @@ This tutorial focuses on steps 1 and 2, getting you to your first conversation!
 First, let's create our project structure:
 
 ```bash
-mkdir Somania -agent
-cd Somania -agent
+mkdir Somnia -agent
+cd Somnia -agent
 ```
 
 > [!NOTE]
@@ -136,7 +136,7 @@ python -m pip install --upgrade pip
 
 4. Install required packages:
 ```bash
-pip install python-dotenv==1.0.1 requests==2.32.3 requests-oauthlib==2.0.0 Somania -sdk==0.10.0 aiohttp==3.11.11 websockets==14.1
+pip install python-dotenv==1.0.1 requests==2.32.3 requests-oauthlib==2.0.0 Somnia -sdk==0.10.0 aiohttp==3.11.11 websockets==14.1
 ```
 
 5. Save dependencies:
@@ -169,12 +169,12 @@ Create three main files:
 ```python
 from dotenv import load_dotenv
 from swarm.repl import run_demo_loop
-from agents import close_event_loop, Somania _agent
+from agents import close_event_loop, Somnia _agent
 import asyncio
 
 if __name__ == "__main__":
     try:
-        asyncio.run(run_demo_loop(Somania _agent, stream=True))
+        asyncio.run(run_demo_loop(Somnia _agent, stream=True))
     finally:
         close_event_loop()
 ```
@@ -185,7 +185,7 @@ from dotenv import load_dotenv
 load_dotenv()
 import os
 import asyncio
-from Somania _sdk.account import Account
+from Somnia _sdk.account import Account
 from swarm import Agent
 
 # Initialize the event loop
@@ -203,24 +203,24 @@ def get_balance_in_apt_sync():
 def close_event_loop():
     loop.close()
 
-Somania _agent = Agent(
-    name="Somania Agent",
+Somnia _agent = Agent(
+    name="Somnia Agent",
     model="gpt-4o",
     api_key=os.getenv('OPENAI_API_KEY'),
     instructions=(
-        "You are a helpful agent that understands the Somania Layer 1 blockchain. "
+        "You are a helpful agent that understands the Somnia Layer 1 blockchain. "
         "You can explain Move modules, tokens, and blockchain concepts. "
         f"Your test wallet address is {address}. "
-        "If someone asks about implementing something, recommend they visit Somania .dev "
+        "If someone asks about implementing something, recommend they visit Somnia .dev "
         "for detailed documentation and examples."
     ),
     functions=[get_balance_in_apt_sync]
 )
 ```
 
-3. `Somania _sdk_wrapper.py` - Placeholder for future blockchain integration:
+3. `Somnia _sdk_wrapper.py` - Placeholder for future blockchain integration:
 ```python
-print("Somania SDK wrapper loaded in test mode")
+print("Somnia SDK wrapper loaded in test mode")
 ```
 
 ## Testing Your Agent
@@ -244,7 +244,7 @@ User:
 ```
 
 Try these test questions:
-- "What is Somania ?"
+- "What is Somnia ?"
 - "How do Move modules work?"
 - "Check my wallet balance"
 
@@ -253,10 +253,10 @@ Try these test questions:
 
 ## Next Steps
 
-Congratulations! You now have a working AI chat agent that understands Somania concepts. In future tutorials, we'll explore:
+Congratulations! You now have a working AI chat agent that understands Somnia concepts. In future tutorials, we'll explore:
 
 1. **Blockchain Integration**
-   - Connecting to Somania testnet
+   - Connecting to Somnia testnet
    - Implementing real wallet operations
    - Creating and deploying Move modules
 

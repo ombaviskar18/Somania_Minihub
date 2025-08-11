@@ -3,7 +3,7 @@ import { setBotCommands, setBotMenuButton } from '../../../../lib/telegram/bot.j
 
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || 'Your_Token';
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`;
-const WEBHOOK_URL = `${process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app'}/api/telegram/webhook`;
+const WEBHOOK_URL = `${process.env.NEXT_PUBLIC_APP_URL || 'https://Somnia-minihub.vercel.app'}/api/telegram/webhook`;
 
 export async function POST() {
   try {
@@ -39,7 +39,7 @@ export async function POST() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        description: `🎮 Somania MiniHub - AI-powered gaming platform on Somania Network!
+        description: `🎮 Somnia MiniHub - AI-powered gaming platform on Somnia Network!
 
 🚀 Features:
 • 15+ AI-powered mini-games
@@ -62,7 +62,7 @@ Start gaming now with /start command!`
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        short_description: '🎮 AI-powered gaming platform on Somania Network. Play games, earn rewards, deploy AI agents!'
+        short_description: '🎮 AI-powered gaming platform on Somnia Network. Play games, earn rewards, deploy AI agents!'
       }),
     });
     
@@ -74,7 +74,7 @@ Start gaming now with /start command!`
       message: 'Telegram bot setup completed successfully!',
       results: results,
       webhook_url: WEBHOOK_URL,
-      bot_username: '@Somania_Minihub_bot'
+      bot_username: '@Somnia_Minihub_bot'
     });
     
   } catch (error) {
@@ -103,7 +103,7 @@ export async function GET() {
     return NextResponse.json({
       bot_info: botInfo,
       webhook_info: webhookInfo,
-      setup_url: 'https://somania-minihub.vercel.app/api/telegram/setup',
+      setup_url: 'https://Somnia-minihub.vercel.app/api/telegram/setup',
       webhook_url: WEBHOOK_URL
     });
     

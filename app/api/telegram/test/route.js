@@ -2,13 +2,13 @@ import { NextResponse } from 'next/server';
 
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || 'Your_Token';
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`;
-const WEB_APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://somania-minihub.vercel.app/';
+const WEB_APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://Somnia-minihub.vercel.app/';
 
 async function sendTestMessage(chatId) {
   try {
-    const message = `🧪 <b>Somania MiniHub Test Message</b>
+    const message = `🧪 <b>Somnia MiniHub Test Message</b>
 
-🎮 This is a test message from your Somania MiniHub bot!
+🎮 This is a test message from your Somnia MiniHub bot!
 
 ✅ If you're seeing this, the bot is working correctly.
 
@@ -23,7 +23,7 @@ async function sendTestMessage(chatId) {
       inline_keyboard: [
         [
           {
-            text: '🎮 Launch Somania MiniHub',
+            text: '🎮 Launch Somnia MiniHub',
             web_app: { url: WEB_APP_URL }
           }
         ],
@@ -88,8 +88,8 @@ export async function POST(request) {
       message: 'Test message sent successfully!',
       result: result,
       bot_info: {
-        username: '@Somania_MiniHub_bot',
-        bot_link: 'https://t.me/Somania_MiniHub_bot',
+        username: '@Somnia_MiniHub_bot',
+        bot_link: 'https://t.me/Somnia_MiniHub_bot',
         web_app_url: WEB_APP_URL
       }
     });
@@ -126,7 +126,7 @@ export async function GET() {
       instructions: {
         test_message: 'POST to this endpoint with {"chatId": "YOUR_CHAT_ID"} to send a test message',
         get_chat_id: 'Send any message to the bot and check the webhook logs for your chat ID',
-        bot_link: 'https://t.me/Somania_MiniHub_bot'
+        bot_link: 'https://t.me/Somnia_MiniHub_bot'
       }
     });
     
