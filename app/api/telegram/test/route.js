@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const TELEGRAM_BOT_TOKEN = '8306788744:AAEupHI0I1zwmEvy_WdtoGO-mFnZeP904kA';
+const TELEGRAM_BOT_TOKEN = 'Your_Token';
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`;
 const WEB_APP_URL = 'https://somania-minihub.vercel.app/';
 

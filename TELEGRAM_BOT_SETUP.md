@@ -5,7 +5,7 @@ This guide explains how to set up and use the Somania MiniHub Telegram bot integ
 ## 📋 Bot Information
 
 - **Bot Username**: `@Somania_Minihub_bot`
-- **Bot Token**: `8306788744:AAEupHI0I1zwmEvy_WdtoGO-mFnZeP904kA`
+- **Bot Token**: `Your_Token`
 - **Web App URL**: `http://somania-minihub.vercel.app/`
 - **GitHub Repository**: `https://github.com/ombaviskar18/Somania_Minihub`
 
@@ -38,7 +38,7 @@ The bot includes a Web App that opens Somania MiniHub directly in Telegram:
 ### Environment Variables
 Create a `.env.local` file with:
 ```env
-TELEGRAM_BOT_TOKEN=8306788744:AAEupHI0I1zwmEvy_WdtoGO-mFnZeP904kA
+TELEGRAM_BOT_TOKEN=Your_Token
 TELEGRAM_BOT_USERNAME=SomaniaMinihubBot
 NEXT_PUBLIC_APP_URL=http://somania-minihub.vercel.app/
 NEXT_PUBLIC_TELEGRAM_WEB_APP_URL=http://somania-minihub.vercel.app/

@@ -5,7 +5,7 @@
  * This script configures the Telegram bot with proper webhook and commands
  */
 
-const TELEGRAM_BOT_TOKEN = '8306788744:AAEupHI0I1zwmEvy_WdtoGO-mFnZeP904kA';
+const TELEGRAM_BOT_TOKEN = 'Your_Token';
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`;
 const WEBHOOK_URL = 'https://somania-minihub.vercel.app/api/telegram/webhook';
 const WEB_APP_URL = 'https://somania-minihub.vercel.app/';
